@@ -1,0 +1,113 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1252
+
+@ARTICLE{Blaise,
+  author = {Jean-Philippe Blaise},
+  title = {Les principales méthodes d’authentification pour smartphones},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{Han,
+  author = {Anish Prasad Shrestha; Dong-You Choi; Goo Rak Kwon; Seung-Jo Han},
+  title = {Kerberos based authentication for inter-domain roaming in wireless
+	heterogeneous network},
+  __markedentry = {[William]},
+  doi = {doi:10.1016/j.camwa.2010.01.019},
+  keywords = {Authentication,Kerberos,Inter-domain roaming,Trusted third party,Session
+	key},
+  owner = {William},
+  publishers = {Elsevier Ltd},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{JESK,
+  author = {JESK},
+  title = {Microsoft Word - WPKI Main Specification 2.2.doc},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{Jung-MukLim,
+  author = {Jung-Muk Lim, Hyung-Jin Lim, and Tai-Myoung Chung},
+  title = {LNCS 3961 - Performance Evaluation of Public Key Based Mechanisms
+	for Mobile IPv4 Authentication in AAA Environments},
+  __markedentry = {[William]},
+  abstract = {Information Networking},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{Pierre,
+  author = {"Yaohui Lei; Alejandro Quintero; Samuel Pierre"},
+  title = {Mobile services access and payment through reusable tickets},
+  __markedentry = {[William]},
+  doi = {doi:10.1016/j.comcom.2008.11.035},
+  keywords = {Authentication,Hash chain,Mobile value-added services,Ticket-based
+	access,Reusable ticket},
+  owner = {William},
+  publishers = {Elsevier B.V.},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {Towards an efficient reputation based hybrid key management architecture
+	for ad hoc networks},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {doi:10.1016/j.elerap.2007.03.006},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {A secure and resistant architecture against attacks for mobile ad
+	hoc networks},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {doi:10.1016/j.comcom.2006.12.024},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {doi:10.1016/j.aeue.2005.10.004},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {doi:10.1016/j.comcom.2006.10.014},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@ARTICLE{,
+  title = {doi:10.1016/j.comnet.2005.08.007},
+  __markedentry = {[William]},
+  owner = {William},
+  timestamp = {2010.10.04}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
