@@ -32,9 +32,9 @@ cxCur=1213
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=53
-Cursor.column=24
-TopSubLine=26
+Cursor.row=49
+Cursor.column=0
+TopSubLine=30
 
 [Frame1]
 Columns=1
@@ -45,12 +45,12 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-8
 MaxPos.y=-30
-NormalPos.left=100
-NormalPos.top=100
-NormalPos.right=1159
-NormalPos.bottom=509
+NormalPos.left=50
+NormalPos.top=50
+NormalPos.right=1109
+NormalPos.bottom=459
 Class=CLatexEdit
-Document=..\..\..\..\tmp\projet.bib
+Document=biblio.bib
 
 [Frame1_Row0]
 cyCur=350
@@ -61,7 +61,7 @@ cxCur=1022
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=0
-Cursor.column=0
+Cursor.row=3
+Cursor.column=9
 TopSubLine=0
 
