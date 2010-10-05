@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  5 OCT 2010 12:20
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  5 OCT 2010 12:29
 entering extended mode
 **C:/Users/William/Desktop/pkimobile/Documents/Résumé/Description*sujet.tex
 ("C:/Users/William/Desktop/pkimobile/Documents/Résumé/Description sujet.tex"
@@ -287,15 +287,15 @@ LaTeX Warning: Empty `thebibliography' environment on input line 52.
 Here is how much of TeX's memory you used:
  2450 strings out of 495285
  29894 string characters out of 3181936
- 93357 words of memory out of 3000000
+ 92357 words of memory out of 3000000
  5629 multiletter control sequences out of 15000+200000
  26836 words of font info for 37 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,4n,24p,840b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,4n,24p,838b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
 {E:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<E:/MiKTeX/fonts/type1/urw/courier/u
 crr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/MiKTeX/fonts/type1/ur
 w/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Description sujet.pdf" (2 pages, 58858 bytes).
+Output written on "Description sujet.pdf" (2 pages, 58724 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
