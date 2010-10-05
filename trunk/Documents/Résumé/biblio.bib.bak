@@ -1,0 +1,95 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1252
+
+@ARTICLE{Anish2010,
+  author = {Anish, Prasad Shrestha and Dong-You, Choi and Goo, Rak Kwon and Seung-Jo,
+	Han},
+  title = {Kerberos based authentication for inter-domain roaming in wireless
+	heterogeneous network},
+  journal = {Computers \& Mathematics with Applications},
+  year = {2010},
+  volume = {60},
+  pages = {245-255},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Georgios2006,
+  author = {Georgios, Kambourakis and Angelos, Rouskas and Stefanos, Gritzalis
+	and Dimitrios, Geneiatakis},
+  title = {Support of subscribers certificates in a hybrid WLAN-3G environment},
+  journal = {Computer networks},
+  year = {2006},
+  volume = {50},
+  pages = {1843-1859},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Jung-Muk2006,
+  author = {Jung-Muk, Lim and Hyung-Jin, Lim and Tai-Myoung, Chung},
+  title = {Performance Evaluation of Public Key Based Mechanisms for Mobile
+	IPv4 Authentication in AAA Environments},
+  journal = {Lecture Notes in Computer Science},
+  year = {2006},
+  volume = {3961},
+  pages = {62-71},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Lamia2010,
+  author = {Lamia, Benazzouz and Mohamed, Elhoucine Elhdhili and Farouk, Kamoun},
+  title = {Towards an efficient reputation based hybrid key management architecture
+	for ad hoc networks},
+  journal = {Security and Communication Networks},
+  year = {2010},
+  volume = {3},
+  pages = {261–277},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Marko2008,
+  author = {Marko, Hassinen and Konstantin, Hyppönen and Elena, Trichina},
+  title = {Utilizing national public-key infrastructure in mobile payment systems},
+  journal = {Electronic Commerce Research and Applications},
+  year = {2008},
+  volume = {7},
+  pages = {214-231},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Yaohui2009,
+  author = {Yaohui, Lei and Alejandro, Quintero and Samuel, Pierre},
+  title = {Mobile services access and payment through reusable tickets},
+  journal = {Computer Communications},
+  year = {2009},
+  volume = {32},
+  pages = {602-610},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{YongLee2006,
+  author = {Yong, Lee and Jeail, Lee and JooSeok, Song},
+  title = {Design and implementation of wireless PKI technology suitable
+	
+	for mobile phone in mobile-commerce},
+  journal = {Computer Communications},
+  year = {2006},
+  volume = {30},
+  pages = {893-903},
+  owner = {Musa},
+  timestamp = {2010.10.04}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
