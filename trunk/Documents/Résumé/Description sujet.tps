@@ -24,7 +24,7 @@ Class=CLatexEdit
 Document=Description sujet.tex
 
 [Frame0_Row0]
-cyCur=563
+cyCur=339
 cyMin=10
 
 [Frame0_Col0]
@@ -34,7 +34,7 @@ cxMin=10
 [Frame0_View0,0]
 Cursor.row=49
 Cursor.column=0
-TopSubLine=30
+TopSubLine=41
 
 [Frame1]
 Columns=1
@@ -61,7 +61,7 @@ cxCur=1022
 cxMin=10
 
 [Frame1_View0,0]
-Cursor.row=3
-Cursor.column=9
-TopSubLine=0
+Cursor.row=63
+Cursor.column=19
+TopSubLine=48
 
