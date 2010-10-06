@@ -14,14 +14,25 @@
   timestamp = {2010.10.05}
 }
 
-@ARTICLE{Georgios2006,
-  author = {Georgios, Kambourakis and Angelos, Rouskas and Stefanos, Gritzalis
-	and Dimitrios, Geneiatakis},
-  title = {Support of subscribers certificates in a hybrid WLAN-3G environment},
-  journal = {Computer networks},
-  year = {2006},
-  volume = {50},
-  pages = {1843-1859},
+@ARTICLE{Lamia2010,
+  author = {Benazzouz, Lamia and Elhoucine, Mohamed Elhdhili and Kamoun, Farouk},
+  title = {Towards an efficient reputation based hybrid key management architecture
+	for ad hoc networks},
+  journal = {Security and Communication Networks},
+  year = {2010},
+  volume = {3},
+  pages = {261–277},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Marko2008,
+  author = {Hassinen, Marko and Hyppönen, Konstantin and Trichina, Elena},
+  title = {Utilizing national public-key infrastructure in mobile payment systems},
+  journal = {Electronic Commerce Research and Applications},
+  year = {2008},
+  volume = {7},
+  pages = {214-231},
   owner = {Musa},
   timestamp = {2010.10.05}
 }
@@ -38,42 +49,20 @@
   timestamp = {2010.10.05}
 }
 
-@ARTICLE{Lamia2010,
-  author = {Lamia, Benazzouz and Mohamed, Elhoucine Elhdhili and Farouk, Kamoun},
-  title = {Towards an efficient reputation based hybrid key management architecture
-	for ad hoc networks},
-  journal = {Security and Communication Networks},
-  year = {2010},
-  volume = {3},
-  pages = {261–277},
-  owner = {Musa},
-  timestamp = {2010.10.05}
-}
-
-@ARTICLE{Marko2008,
-  author = {Marko, Hassinen and Konstantin, Hyppönen and Elena, Trichina},
-  title = {Utilizing national public-key infrastructure in mobile payment systems},
-  journal = {Electronic Commerce Research and Applications},
-  year = {2008},
-  volume = {7},
-  pages = {214-231},
-  owner = {Musa},
-  timestamp = {2010.10.05}
-}
-
-@ARTICLE{Yaohui2009,
-  author = {Yaohui, Lei and Alejandro, Quintero and Samuel, Pierre},
-  title = {Mobile services access and payment through reusable tickets},
-  journal = {Computer Communications},
-  year = {2009},
-  volume = {32},
-  pages = {602-610},
+@ARTICLE{Georgios2006,
+  author = {Kambourakis, Georgios and Rouskas, Angelos and Gritzalis, Stefanos
+	and Geneiatakis, Dimitrios},
+  title = {Support of subscribers certificates in a hybrid WLAN-3G environment},
+  journal = {Computer networks},
+  year = {2006},
+  volume = {50},
+  pages = {1843-1859},
   owner = {Musa},
   timestamp = {2010.10.05}
 }
 
 @ARTICLE{YongLee2006,
-  author = {Yong, Lee and Jeail, Lee and JooSeok, Song},
+  author = {Lee, Yong and Lee, Jeail and Song, JooSeok},
   title = {Design and implementation of wireless PKI technology suitable
 	
 	for mobile phone in mobile-commerce},
@@ -83,6 +72,17 @@
   pages = {893-903},
   owner = {Musa},
   timestamp = {2010.10.04}
+}
+
+@ARTICLE{Yaohui2009,
+  author = {Lei, Yaohui and Quintero, Alejandro and Pierre, Samuel},
+  title = {Mobile services access and payment through reusable tickets},
+  journal = {Computer Communications},
+  year = {2009},
+  volume = {32},
+  pages = {602-610},
+  owner = {Musa},
+  timestamp = {2010.10.05}
 }
 
 @comment{jabref-meta: selector_publisher:}
