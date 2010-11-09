@@ -1,24 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{Assora2007}
+M.~Assora, J.~Kadirire, and A.~Shirvani, ``Using wpki for security of web
+  transaction,'' {\em Lecture Notes in Computer Science, 2007}, vol.~4655,
+  pp.~11--20, 2007.
+
+\bibitem{WMLScript}
+{\em WMLScript Crypto API Library: WAP-161-WMLScriptCrypto-20010620}.
+
 \bibitem{Marko2008}
 M.~Hassinen, K.~Hyppönen, and E.~Trichina, ``Utilizing national public-key
   infrastructure in mobile payment systems,'' {\em Electronic Commerce Research
   and Applications}, vol.~7, pp.~214--231, 2008.
-
-\bibitem{YongLee2006}
-Y.~Lee, J.~Lee, and J.~Song, ``Design and implementation of wireless pki
-  technology suitable for mobile phone in mobile-commerce,'' {\em Computer
-  Communications}, vol.~30, pp.~893--903, 2006.
-
-\bibitem{Anish2010}
-A.~S. Prasad, D.-Y. C, G.~R. Kwon, and S.-J. Han, ``Kerberos based
-  authentication for inter-domain roaming in wireless heterogeneous network,''
-  {\em Computers \& Mathematics with Applications}, vol.~60, pp.~245--255,
-  2010.
-
-\bibitem{Yaohui2009}
-Y.~Lei, A.~Quintero, and S.~Pierre, ``Mobile services access and payment
-  through reusable tickets,'' {\em Computer Communications}, vol.~32,
-  pp.~602--610, 2009.
 
 \end{thebibliography}
