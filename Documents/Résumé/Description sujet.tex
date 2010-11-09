@@ -41,8 +41,10 @@ De nos jours, les téléphones mobiles sont partout, et la population de smartphon
 
 \section{Problématique}
 A l'heure actuelle, les téléphones ainsi que les smartphones se démocratisent de plus en plus, et il y a donc de plus en plus de données qui transitent via ces appareils, que cela soit via le wifi, bluetooth, ou directement le réseau téléphonique. On commence ainsi à faire des achats directement depuis son téléphone, où encore envoyer des informations personnels, comme des mots de passe, ou des documents que l'on veut garder secret. Malheureusement, toutes ces données transitent plus ou moins en clair dans l'air, à la portée de n'importe qui. Il faut donc sécuriser les données. Quelles solutions existent ? Des systèmes comme PKI ont déjà fait leurs preuves sur nos ordinateurs, mais existe-t-il des solutions concrètes pour nos mobiles ?
+
 \section{Travaux existants dans la littérature scientifique}
 Il existe de nombreux travaux dans le domaine, notamment pour la PKI. Le premier article étudié\cite{Assora2007}, est très intéressant. Datant de 2007, cet article se pose une excellente question. Comment sécuriser des données transitant d'un téléphone mobile a un site marchant? Ainsi on peut trouver une solution assez intéressante, la création des clés d'authentification utilisées se fait en local, c'est a dire que le téléphone est capable de générer ses propres clés. C'est un bon point. Les auteurs utilisent la Crypto librairie\cite{WMLScript} pour la signature de données transmises. Cependant cette solution connait quelques faiblesses, que nous détaillerons plus tard. 
+
 Le second article\cite{Marko2008} nous propose un autre systèmes de paiement sécurisé pour mobile via une PKI. Pour leurs tests, le centre d'enregistrement finlandais s'est chargé de leur fournir la PKI.
 
 \begin{figure}[!h]
@@ -56,14 +58,28 @@ Un machine en ligne (banques, vente en ligne, etc.) crypte son message, et le si
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.75\textwidth,height=0.25\textwidth]{2.jpg}
+\includegraphics[width=0.75\textwidth,height=0.20\textwidth]{2.jpg}
 \caption{Modèle de paiement virtuel}
 \end{figure}
 
+Cette figure schématise le fonctionnement du paiement via téléphone mobile. 6 étapes sont nécessaires. 
+
+Le troisième article sur une PKI pour mobile \cite{YongLee2006}. Leur travail se reporte à d'anciens téléphones, avec très peu de mémoire vive et même un processeur très faible. Ainsi la génération de clés RSA leur est impossible. Ils décidèrent d'utiliser un autre algorithme de signature, plus adapté a leur type de téléphone, le ECDSA (Elliptic Curve Digital Signature Algorithm), avec des clés de 163 bits, équivalent à une clé RSA de 1024 bits, en terme de sécurité. De ce fait, les certificats ainsi générés sont eux aussi, plus petits.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.70\textwidth]{3.jpg}
+\caption{Schéma de leur système de PKI pour mobile}
+\end{figure}
+
+Pour le premier article, offrant une solution Kerberos \cite{Yaohui2009}, met en avant la non-répudiation, en utilisant une méthode de hashage fonctionnant plus rapidement que les algorithmes de signatures numériques. Leur procédé fonctionne exactement comme le protocole Kerberos que nous utilisons sur nos ordinateurs. Le téléphone mobile demande à s'authenfier auprès du centre d'authentification. Puis aprèes quelques opérations, on fournit au téléphone un ticket, lui permettant d'accéder au service demandé au tout debut. Cependant, il est possible de réutiliser un ticket pour accéder au même service, a plusieurs reprises. Au niveau de la sécurité, il n'est pas possible de créer un ticket, car la signature de l'authorité de certifications n'est pas falsifiable. Un attaquant ne peux pas utiliser ou modifier un ticket émis. Les clés simétriques, utilisées lors de l'authentification sont regénérées à chaque session.
+
 \section{Premières critiques des travaux existants}
-Les travaux existants proposent des solutions très bien et très complètes. Malgré tout, chacun propose sa propre solution ainsi que sa propre implémentation. Mais laquelle est la meilleure ? Très peu, voir aucunes, publications ne comparent sa solution avec celle des autres en pratique afin de déterminer la meilleure solution. Si l'on ne devait en choisir qu'une seule, laquelle choissirait-on ?
+Premier constat, aucune solution de PKI ne supporte l'échange de données de téléphone à téléphone, seuls les échanges de données entre le téléphone et un serveur (banque, site de vente en ligne, etc.) sont gérés. D'un autre coté, les 3 solutions de PKI présentées, sont relativement complètes. Les systèmes de signatures sont réfléchis, les clés privées sont innaccessibles, même en cas de vol, puisque les clés sont stockées dans la carte SIM, qui elle meê est protégée par un code PIN.
+De leur coté, les solutions Kerberos, présentées plus tôt ont eux aussi ce soucis de ne pas gérer les échanges entre deux téléphones.
+
 \section{Objectifs et perspectives du projet de synthèse}
-L'objectif est d'implémenter le déploiement automatique d'un système de certification pour mobile. Pour cela, il faudra comparer le fonctionnement d'une PKI et de Kerberos aussi bien de manière expérimentale que fonctionnelle.
+Notre objectif est d'implémenter le déploiement automatique d'un système de certification pour mobile. Pour cela, il faudra comparer le fonctionnement d'une PKI et de Kerberos aussi bien de manière expérimentale que fonctionnelle.
 Nous nous focaliseront sur une base théorique pour commenter les documents existants. Et à partir de ce qu'on nous aurons retenu, mettre en oeuvre une PKI pour mobile de la manière la plus efficace possible.
 
 
