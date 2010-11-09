@@ -11,12 +11,14 @@
 \usepackage {prettyref}
 \usepackage{version}
 \DeclareGraphicsExtensions{.jpg,.mps,.pdf,.png,.gif, .ps, .eps}
+\graphicspath{{images/}}
 \urldef{\mailsa}\path|jeanphilippe.blaise@umail.univ-metz.fr|
 \urldef{\mailsb}\path|william.jouot@umail.univ-metz.fr|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 \newcommand{\noun}[1]{\textsc{#1}}
 \newtheorem{algorithm}{Algorithm}
+
 \begin{document}
 \title{Comparaison fonctionnelle et expérimentale d'une PKI sur mobile et de Kerberos sur mobile. Mise en oeuvre et comparaison rigoureuse des résultats expérimentaux. Automatisation du déploiement.}
 \author{Jean-Philippe Blaise, Willian Jouot}
@@ -26,21 +28,38 @@ Ile du Saulcy, 57045 Metz, France\\
 \mailsb\\
 }
 \maketitle
-%\begin {abstract}
-%\linespread{1.5cm}
-%Insérer ici quelques lignes de résumé
-%\end{abstract}
+
+\begin {abstract}
+\linespread{1.5cm}
+De nos jours, les téléphones mobiles sont partout, et la population de smartphone est en plein essor. Ces types d'appareils peuvent faire de plus en plus de choses, et ainsi égaler nos ordinateurs. Ainsi en leur fournissant une multitude de moyens de communication, nous devons nous poser la question de la sécurité des données, telle que nous la connaissons pour nos ordinateurs. Les smartphones, étant de plus en plus puissant, peuvent parfaitement gérer un ou plusieurs protocole d'authentification. De ce fait, nous allons développer une solution de PKI et une solution  Kerberos pour smartphones utilisants le celebre Operating System de Google, Android. Dans cet article, nous allons comparer quelques solutions déjà existantes, puis proposer notre méthode.
+\end{abstract}
 
 \begin{description}
 	\item[Mots-clés :] 
-{PKI, Kerberos, mobile, mise en oeuvre, déploiement}
+{PKI, Kerberos, Android, mobile, mise en oeuvre, déploiement automatique}
 \end{description}
 
 \section{Problématique}
 A l'heure actuelle, les téléphones ainsi que les smartphones se démocratisent de plus en plus, et il y a donc de plus en plus de données qui transitent via ces appareils, que cela soit via le wifi, bluetooth, ou directement le réseau téléphonique. On commence ainsi à faire des achats directement depuis son téléphone, où encore envoyer des informations personnels, comme des mots de passe, ou des documents que l'on veut garder secret. Malheureusement, toutes ces données transitent plus ou moins en clair dans l'air, à la portée de n'importe qui. Il faut donc sécuriser les données. Quelles solutions existent ? Des systèmes comme PKI ont déjà fait leurs preuves sur nos ordinateurs, mais existe-t-il des solutions concrètes pour nos mobiles ?
 \section{Travaux existants dans la littérature scientifique}
-Il existe de nombreux travaux dans le domaine, notamment pour la PKI. Le premier est basé sur une PKI pour un système de paiement\cite{Marko2008}. Un autre document propose une solution d'implémentation d'une wireless PKI (WPKI)\cite{YongLee2006}. 
-Beaucoup moins d'article parlant de  Kerberos existe à ce jour. Quelques uns sont interessant comme ces articles parlant d'une authentification  Kerberos par billets "réutilisables"\cite{Anish2010,Yaohui2009}.
+Il existe de nombreux travaux dans le domaine, notamment pour la PKI. Le premier article étudié\cite{Assora2007}, est très intéressant. Datant de 2007, cet article se pose une excellente question. Comment sécuriser des données transitant d'un téléphone mobile a un site marchant? Ainsi on peut trouver une solution assez intéressante, la création des clés d'authentification utilisées se fait en local, c'est a dire que le téléphone est capable de générer ses propres clés. C'est un bon point. Les auteurs utilisent la Crypto librairie\cite{WMLScript} pour la signature de données transmises. Cependant cette solution connait quelques faiblesses, que nous détaillerons plus tard. 
+Le second article\cite{Marko2008} nous propose un autre systèmes de paiement sécurisé pour mobile via une PKI. Pour leurs tests, le centre d'enregistrement finlandais s'est chargé de leur fournir la PKI.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.50\textwidth]{1.jpg}
+\caption{Exemple d'échange de messages securisés}
+\end{figure}
+
+Pour faire simple, les clés privées sont stockées dans lae carte SIM. Etant infalsifiable, les clés privées ne peuvent pas être compromises. Chaque carte SIM se voit attribuer un unique certificat, délivré par le centre d'enregistrement finlandais. Cette carte SIM est capable de signer les données, mais le cryptage/décryptage se fait sur le téléphone.
+Un machine en ligne (banques, vente en ligne, etc.) crypte son message, et le signe. Le message est ensuite envoyé au téléphone mobile. Celui-ci vérifie la signature, dans le cas ou elle est correcte, le téléphone consulte sa clé privée, stockée dans la carte SIM, et décrypte le message.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth,height=0.25\textwidth]{2.jpg}
+\caption{Modèle de paiement virtuel}
+\end{figure}
+
 \section{Premières critiques des travaux existants}
 Les travaux existants proposent des solutions très bien et très complètes. Malgré tout, chacun propose sa propre solution ainsi que sa propre implémentation. Mais laquelle est la meilleure ? Très peu, voir aucunes, publications ne comparent sa solution avec celle des autres en pratique afin de déterminer la meilleure solution. Si l'on ne devait en choisir qu'une seule, laquelle choissirait-on ?
 \section{Objectifs et perspectives du projet de synthèse}

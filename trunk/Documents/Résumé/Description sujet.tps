@@ -34,7 +34,7 @@ cxMin=10
 [Frame0_View0,0]
 Cursor.row=49
 Cursor.column=0
-TopSubLine=41
+TopSubLine=37
 
 [Frame1]
 Columns=1

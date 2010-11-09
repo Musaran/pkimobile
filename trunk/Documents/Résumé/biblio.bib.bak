@@ -1,17 +1,15 @@
 % This file was created with JabRef 2.6.
 % Encoding: Cp1252
 
-@ARTICLE{Anish2010,
-  author = {Anish, Prasad Shrestha and Dong-You, Choi and Goo, Rak Kwon and Seung-Jo,
-	Han},
-  title = {Kerberos based authentication for inter-domain roaming in wireless
-	heterogeneous network},
-  journal = {Computers \& Mathematics with Applications},
-  year = {2010},
-  volume = {60},
-  pages = {245-255},
+@ARTICLE{Assora2007,
+  author = {Assora, Mohammed and Kadirire, James and Shirvani, Ayoub},
+  title = {Using WPKI for Security of Web Transaction},
+  journal = {Lecture Notes in Computer Science, 2007},
+  year = {2007},
+  volume = {4655},
+  pages = {11-20},
   owner = {Musa},
-  timestamp = {2010.10.05}
+  timestamp = {2010.11.09}
 }
 
 @ARTICLE{Lamia2010,
@@ -33,18 +31,6 @@
   year = {2008},
   volume = {7},
   pages = {214-231},
-  owner = {Musa},
-  timestamp = {2010.10.05}
-}
-
-@ARTICLE{Jung-Muk2006,
-  author = {Jung-Muk, Lim and Hyung-Jin, Lim and Tai-Myoung, Chung},
-  title = {Performance Evaluation of Public Key Based Mechanisms for Mobile
-	IPv4 Authentication in AAA Environments},
-  journal = {Lecture Notes in Computer Science},
-  year = {2006},
-  volume = {3961},
-  pages = {62-71},
   owner = {Musa},
   timestamp = {2010.10.05}
 }
@@ -81,6 +67,31 @@
   year = {2009},
   volume = {32},
   pages = {602-610},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Jung-Muk2006,
+  author = {Lim, Jung-Muk and Lim, Hyung-Jin and Chung, Tai-Myoung},
+  title = {Performance Evaluation of Public Key Based Mechanisms for Mobile
+	IPv4 Authentication in AAA Environments},
+  journal = {Lecture Notes in Computer Science},
+  year = {2006},
+  volume = {3961},
+  pages = {62-71},
+  owner = {Musa},
+  timestamp = {2010.10.05}
+}
+
+@ARTICLE{Anish2010,
+  author = {Prasad, Anish Shrestha and C, Dong-Youhoi and Kwon, Goo Rak and Han,
+	Seung-Jo},
+  title = {Kerberos based authentication for inter-domain roaming in wireless
+	heterogeneous network},
+  journal = {Computers \& Mathematics with Applications},
+  year = {2010},
+  volume = {60},
+  pages = {245-255},
   owner = {Musa},
   timestamp = {2010.10.05}
 }
