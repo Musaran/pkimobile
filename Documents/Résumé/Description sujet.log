@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  9 NOV 2010 16:37
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  9 NOV 2010 17:46
 entering extended mode
 **D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description*sujet.tex
 ("D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description sujet.tex"
@@ -309,24 +309,28 @@ Underfull \vbox (badness 3780) has occurred while \output is active []
 
  [4 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/4.jpg> <D:/Taff/M2/
 pkimobile/svn/trunk/Documents/Résumé/images/5.jpg>]
-("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl")
-[5] ("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") )
- 
+<images/6.jpg, id=22, 330.23375pt x 494.84875pt>
+File: images/6.jpg Graphic file (type jpg)
+ <use images/6.jpg>
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl"
+[5 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/6.jpg>]) [6]
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") ) 
 Here is how much of TeX's memory you used:
- 2488 strings out of 495285
- 31449 string characters out of 3180385
+ 2493 strings out of 495285
+ 31521 string characters out of 3180385
  93401 words of memory out of 3000000
- 5657 multiletter control sequences out of 15000+200000
+ 5661 multiletter control sequences out of 15000+200000
  34927 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,5n,24p,1011b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/
-MiKTeX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/font
-s/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times
-/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Description sujet.pdf" (5 pages, 531697 bytes).
+{C:/
+Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
+eX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/ty
+pe1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utm
+r8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Description sujet.pdf" (6 pages, 635183 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
