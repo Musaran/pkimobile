@@ -53,7 +53,7 @@ Le second article\cite{Marko2008} nous propose un autre systèmes de paiement séc
 \caption{Exemple d'échange de messages securisés}
 \end{figure}
 
-Pour faire simple, les clés privées sont stockées dans lae carte SIM. Etant infalsifiable, les clés privées ne peuvent pas être compromises. Chaque carte SIM se voit attribuer un unique certificat, délivré par le centre d'enregistrement finlandais. Cette carte SIM est capable de signer les données, mais le cryptage/décryptage se fait sur le téléphone.
+Pour faire simple, les clés privées sont stockées dans la carte SIM. Etant infalsifiable, les clés privées ne peuvent pas être compromises. Chaque carte SIM se voit attribuer un unique certificat, délivré par le centre d'enregistrement finlandais. Cette carte SIM est capable de signer les données, mais le cryptage/décryptage se fait sur le téléphone.
 Un machine en ligne (banques, vente en ligne, etc.) crypte son message, et le signe. Le message est ensuite envoyé au téléphone mobile. Celui-ci vérifie la signature, dans le cas ou elle est correcte, le téléphone consulte sa clé privée, stockée dans la carte SIM, et décrypte le message.
 
 \begin{figure}[H]
@@ -91,20 +91,25 @@ Pour ce faire, le téléphone s'authentifie auprès d'un réseau "visiteur", qui lui
 \end{figure}
 
 \section{Premières critiques des travaux existants}
-Premier constat, aucune solution de PKI ne supporte l'échange de données de téléphone à téléphone, seuls les échanges de données entre le téléphone et un serveur (banque, site de vente en ligne, etc.) sont gérés. D'un autre coté, les 3 solutions de PKI présentées, sont relativement complètes. Les systèmes de signatures sont réfléchis, les clés privées sont innaccessibles, même en cas de vol, puisque les clés sont stockées dans la carte SIM, qui elle meê est protégée par un code PIN.
+Premier constat, aucune solution de PKI ne supporte l'échange de données de téléphone à téléphone, seuls les échanges de données entre le téléphone et un serveur (banque, site de vente en ligne, etc.) sont gérés. D'un autre coté, les 3 solutions de PKI présentées, sont relativement complètes. Les systèmes de signatures sont réfléchis, les clés privées sont innaccessibles, même en cas de vol, puisque les clés sont stockées dans la carte SIM, qui est elle même protégée par un code PIN.
 De leur coté, les solutions Kerberos, présentées plus tôt ont eux aussi ce soucis de ne pas gérer les échanges entre deux téléphones.
+
+Evidemment, chacunes des techniques PKI ou Kerberos présentent des désavantages qui sont propres à leur fonctionnement. Par exemple, lors d'un système Kerberos, les mots de passe utilisateurs sont enregistrés sur le serveur de manière non hashé, car le serveur a besoin du mot de passe en clair pour crypter la réponse à envoyer au client. De plus, Kerberos, de part son fonctionnement un serveur, peut poser problème si pour une raison ou une autre le serveur d'authentification n'est pas accessible. Dans le cas par exemple où le serveur a planté.
 
 \section{Objectifs et perspectives du projet de synthèse}
 Notre objectif est d'implémenter le déploiement automatique d'un système de certification pour mobile. Pour cela, nous allons devoir implémenter une solution de PKI pour mobile, et une solution Kerberos pour mobile. Ainsi, nous pourrons comparer de manière fonctionnelle les deux systèmes et choisir le plus efficace.
+Dans le cas de Kerberos, le but est de créer un petit client, capable de se connecter à un centre d'authentification Kerberos pour ensuite avoir un ticket pour un service demandé.
 
 \section{Premiers essais}
-Nous avons commencé à implémenter une solution de PKI. Seules les méthodes de génération de clés, et de signatures sont pour le moment présentes.
+Nous avons commencé à implémenter une solution de PKI. Seules les méthodes de génération de clés, et de signatures sont pour le moment présentes. Le but de cette première implémentation était de pouvoir manipuler et vérifier le fonctionnement des fonctions de bases pour les clés publiques et privés.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.40\textwidth,height=0.60\textwidth]{6.jpg}
 \caption{Début d'implementation}
 \end{figure}
+
+Coté Kerberos, nous avons réussi à créer un serveur Kerberos, basé pour l'instant uniquement sur des utilisateurs crées manuellement, et à créer un client Java capable de se connecter sur ce serveur pour récupérer, après quelques échanges, un ticket de service. La prochaine étape est de, premièrement, convertir le projet pour qu'il fonctionne sur Android, et ensuite de créer un service, compatible Kerberos, comme par exemple une session SSH, pour que le téléphone puisse se connecter dessus.
 
 \bibliographystyle{ieeetr}
 \bibliography{biblio}
