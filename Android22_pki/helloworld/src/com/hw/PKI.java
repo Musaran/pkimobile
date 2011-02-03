@@ -12,58 +12,52 @@ public class PKI
 {
 	private PrivateKey privateKey;
 	private PublicKey publicKey;
+	public boolean keyLoaded = false;
+	private HelloAndroid parent;
 
+	public PKI(HelloAndroid ha)
+	{
+		parent = ha;
+	}
+	
 	public void generateKeys()
 	{
-		try
-		{
+		try	{
 			KeyPairGenerator keyGen = KeyPairGenerator.getInstance( "DSA" );
 			keyGen.initialize( 1024 );
 			KeyPair pair = keyGen.generateKeyPair();
 			this.privateKey = pair.getPrivate();
 			this.publicKey = pair.getPublic();
+			keyLoaded = true;
 			//System.out.println( "Public key: " + getString( publicKey.getEncoded() ) );
 			//System.out.println( "Private key: " + getString( privateKey.getEncoded() ) );
-		}
-		catch( Exception e )
-		{
-			e.printStackTrace();
-		}
+		}catch( Exception e ){e.printStackTrace();}
 	}
 
 	public String sign( String plaintext )
 	{
-		try
-		{
+		if( !keyLoaded ) { parent.print("Pas de clés"); return null; }
+		try	{
 			Signature dsa = Signature.getInstance( "SHA1withDSA" );
 			dsa.initSign( privateKey );
 			dsa.update( plaintext.getBytes() );
 			byte[] signature = dsa.sign();
 			return getString( signature );
-		}
-		catch( Exception e )
-		{
-			e.printStackTrace();
-		}
+		}catch( Exception e ){e.printStackTrace();}
 		return null;
 	}
 
 	public boolean verifySignature( String plaintext, String signature )
 	{
-		try
-		{
+		if( !keyLoaded ) { parent.print("Pas de clés"); return false; }
+		try	{
 			Signature dsa = Signature.getInstance( "SHA1withDSA" );
 			dsa.initVerify( publicKey );
-
 			dsa.update( plaintext.getBytes() );
 			boolean verifies = dsa.verify( getBytes( signature ) );
 			//System.out.println("signature verifies: " + verifies);
 			return verifies;
-		}
-		catch( Exception e )
-		{
-			e.printStackTrace();
-		}
+		}catch( Exception e ){e.printStackTrace();}
 		return false;
 	}
 
@@ -127,24 +121,24 @@ public class PKI
 		return bos.toByteArray();
 	}
 
-	public static void test(HelloAndroid ha)
+	/*public static void test(HelloAndroid ha)
 	{
 		PKI pki = new PKI();
 		pki.generateKeys();
 		String data = "This is a test";
 		String baddata = "This is an test";
 		String signature = pki.sign( data );
-		String badSignature = signature.substring( 0,
-				signature.length() - 1 ) + "1";
+		String badSignature = signature.substring( 0, signature.length() - 1 ) + "1";
 		boolean verifies = pki.verifySignature( data, signature );
 		boolean verifiesBad = pki.verifySignature( data, badSignature );
 		boolean verifiesBad2 = pki.verifySignature( baddata, signature );
 
-		ha.print( "Data: " + data );
-		ha.print( "Signature: " + signature );
-		ha.print( "Verifies (good): " + verifies );
-		ha.print( "Bad Signature: " + badSignature );
-		ha.print( "Verifies (bad): " + verifiesBad );
-		ha.print( "Verifies (bad2): " + verifiesBad2 );
-	}
+		ha.print( "Texte: " + data );
+		ha.print( "Mauvais texte: " + baddata );
+		ha.print( "Signature du texte: " + signature );
+		ha.print( "Verification texte-signature (true): " + verifies );
+		ha.print( "Fausse signature: " + badSignature );
+		ha.print( "Verification texte-fausse signature (false): " + verifiesBad );
+		ha.print( "Verification faux texte-signature (false): " + verifiesBad2 );
+	}*/
 }

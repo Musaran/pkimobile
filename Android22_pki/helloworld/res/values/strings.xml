@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Test...</string>
-    <string name="app_name">PKI Test Implementation</string>
+    <string name="hello">Prêt</string>
+    <string name="app_name">Test de PKI</string>
 </resources>
