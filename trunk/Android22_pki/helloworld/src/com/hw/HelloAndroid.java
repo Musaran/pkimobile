@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.security.KeyFactory;
+import java.security.PublicKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import android.app.Activity;
@@ -25,7 +26,8 @@ public class HelloAndroid extends Activity implements OnClickListener
 	private TextView textArea = null;
 	private Button menuButton = null;
 	private PKI pkiKeys = null;
-	private String serverPublic = "";
+	
+	private PublicKey serverKey = null;
 	
 	/* -------------------- GUI -------------------- */
     @Override
@@ -86,10 +88,12 @@ public class HelloAndroid extends Activity implements OnClickListener
 	public void keyGetServer()
 	{
 		long start = System.currentTimeMillis();
-		serverPublic = getURL("http://williamjouot.com/pki/pki.php?op=1");
-		this.print(serverPublic);
+		String rawserver = getURL("http://williamjouot.com/pki/public.der");
+		this.print(rawserver);
 		long duration = System.currentTimeMillis() - start;
 		this.print("Clé publique reçue en "+duration+"ms.");
+		//serverKey = pkiKeys.getPublicKeyFromText(rawserver);
+		//this.print("Pub: "+serverKey.getFormat()+" - "+serverKey.getEncoded());
 	}
 	
 	public void keySetServer()
@@ -106,7 +110,10 @@ public class HelloAndroid extends Activity implements OnClickListener
 		this.print("Signé 'CHALLENGE' en "+duration+"ms.");
 		
 		// On le crypte avec la clé publique du serveur
-		
+		start = System.currentTimeMillis();
+		String en = pkiKeys.encryptText(si, pkiKeys.getPublicKey());
+		long duration2 = System.currentTimeMillis() - start;
+		this.print("Chiffrage en "+duration2+"ms: "+en);
 	}
 
 	public void keyLoadFromFile()
