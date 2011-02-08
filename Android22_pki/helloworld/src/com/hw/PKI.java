@@ -1,6 +1,7 @@
 package com.hw;
 
 import java.io.ByteArrayOutputStream;
+import java.security.Key;
 import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -23,7 +24,7 @@ public class PKI
 	private final String filePrivate = "private.key";
 	private final String filePublic = "public.key";
 	
-	private final String cAlgorithm = "RSA";
+	private final String cAlgorithm = "RSA"; // DSA
 	private final String sAlgorithm = "SHA1withRSA"; //SHA1withDSA
 
 	public PKI(HelloAndroid ha){parent = ha;}
@@ -49,7 +50,6 @@ public class PKI
 	{
 		try
 		{
-			Cipher test = Cipher.getInstance(cAlgorithm);
 			KeyFactory keyFactory = KeyFactory.getInstance(cAlgorithm);
 			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(parent.getFile(filePublic));
 			publicKey  = keyFactory.generatePublic(publicKeySpec);
@@ -71,6 +71,18 @@ public class PKI
 			parent.setFile(filePublic, x509EncodedKeySpec.getEncoded());
 		}
 	}
+	
+	public PublicKey getPublicKeyFromText(String text)
+	{
+		try
+		{
+			KeyFactory keyFactory = KeyFactory.getInstance(cAlgorithm);
+			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(text.getBytes());
+			return(keyFactory.generatePublic(publicKeySpec));
+		}
+		catch(Exception e) {e.printStackTrace();}
+		return null;
+	}
 
 	/* -------------------- KEYS OPERATIONS -------------------- */
 	public String getSignature( String text )
@@ -89,7 +101,22 @@ public class PKI
 		}
 		return null;
 	}
+	
+	public String encryptText( String text, Key pub )
+	{
+		try
+		{
+			Cipher cf = Cipher.getInstance(cAlgorithm);
+			cf.init(Cipher.ENCRYPT_MODE, pub);
+			cf.update(text.getBytes());
+			byte[] encrypted = cf.doFinal();
+			return getString(encrypted);
+		}
+		catch( Exception e ){e.printStackTrace();}
+		return null;
+	}
 
+	/* DUMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
 	public boolean verifySignature( String plaintext, String signature )
 	{
 		if( !keyLoaded ) { parent.print("Pas de clés"); return false; }
@@ -102,39 +129,6 @@ public class PKI
 			return verifies;
 		}catch( Exception e ){e.printStackTrace();}
 		return false;
-	}
-
-	/**
-	 * Returns true if the specified text is encrypted, false otherwise
-	 */
-	public static boolean isEncrypted( String text )
-	{
-		// If the string does not have any separators then it is not
-		// encrypted
-		if( text.indexOf( '-' ) == -1 )
-		{
-			///System.out.println( "text is not encrypted: no dashes" );
-			return false;
-		}
-
-		StringTokenizer st = new StringTokenizer( text, "-", false );
-		while( st.hasMoreTokens() )
-		{
-			String token = st.nextToken();
-			if( token.length() > 3 )
-			{
-				return false;
-			}
-			for( int i=0; i<token.length(); i++ )
-			{
-				if( !Character.isDigit( token.charAt( i ) ) )
-				{
-					return false;
-				}
-			}
-		}
-		//System.out.println( "text is encrypted" );
-		return true;
 	}
 
 	private static String getString( byte[] bytes )
