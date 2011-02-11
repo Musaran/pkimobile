@@ -123,6 +123,11 @@ public class HelloAndroid extends Activity implements OnClickListener
 			this.print("Chiffrage en "+duration2+"ms: "+en);
 			
 			// Y a plus qu'à envoyer
+			start = System.currentTimeMillis();
+			ServerDialog sd = new ServerDialog();
+			byte[] response = sd.getFromServer("192.168.0.21", 1023, en);
+			long duration3 = System.currentTimeMillis() - start;
+			this.print("Envoi et réponse serveur en "+duration3+"ms : "+response);
 		}
 		else
 			Toast.makeText(getApplicationContext(), "No Server Key", Toast.LENGTH_SHORT).show();
