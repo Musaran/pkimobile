@@ -1,6 +1,6 @@
 package com.hw;
 
-import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.security.Key;
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -10,8 +10,10 @@ import java.security.PublicKey;
 import java.security.Signature;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import java.util.StringTokenizer;
+
 import javax.crypto.Cipher;
+
+import android.content.Context;
 
 public class PKI
 {
@@ -72,12 +74,12 @@ public class PKI
 		}
 	}
 	
-	public PublicKey getPublicKeyFromText(String text)
+	public PublicKey getPublicKeyFromFile(String filename)
 	{
 		try
 		{
 			KeyFactory keyFactory = KeyFactory.getInstance(cAlgorithm);
-			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(text.getBytes());
+			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(parent.getFile(filename));
 			return(keyFactory.generatePublic(publicKeySpec));
 		}
 		catch(Exception e) {e.printStackTrace();}
@@ -85,7 +87,7 @@ public class PKI
 	}
 
 	/* -------------------- KEYS OPERATIONS -------------------- */
-	public String getSignature( String text )
+	public byte[] getSignature( byte[] text )
 	{
 		if(keyLoaded)
 		{
@@ -93,31 +95,52 @@ public class PKI
 			{
 				Signature dsa = Signature.getInstance(sAlgorithm);
 				dsa.initSign( privateKey );
-				dsa.update( text.getBytes() );
+				dsa.update( text );
 				byte[] signature = dsa.sign();
-				return getString( signature );
+				return signature;
 			}
 			catch( Exception e ){e.printStackTrace();}
 		}
 		return null;
 	}
 	
-	public String encryptText( String text, Key pub )
+	public byte[] encryptText( byte[] btext, Key pub )
 	{
 		try
 		{
-			Cipher cf = Cipher.getInstance(cAlgorithm);
+			DataOutputStream eOutRSA = new DataOutputStream(parent.openFileOutput("temp.m", Context.MODE_PRIVATE));//new FileOutputStream("temp"));
+			Cipher cf = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 			cf.init(Cipher.ENCRYPT_MODE, pub);
-			cf.update(text.getBytes());
-			byte[] encrypted = cf.doFinal();
-			return getString(encrypted);
+			// TODO: Ca bug, le but est de découper des morceaux de 117 bytes (car clé de 1024 donc ((1024 / 8) - 11) bytes)
+			int bigcount = 0;
+			for(int i = 0; i < btext.length; i+=117)
+			{
+				byte[] te = new byte[117]; int count = 0;
+				for(int j = i; j < (i+117); j++)
+				{
+					if(j < btext.length)
+					{
+						te[count] = btext[j];
+						count++;
+						bigcount++;
+					}
+				}
+				
+				byte[] encodedMsg = cf.doFinal(te);
+				eOutRSA.write(encodedMsg, 0, encodedMsg.length);
+			}
+			parent.print(bigcount+" bytes encodés.");
+			eOutRSA.close();
+			byte[] res = parent.getFile("temp.m");
+			parent.deleteFile("temp.m");
+			return res;
 		}
 		catch( Exception e ){e.printStackTrace();}
 		return null;
 	}
 
 	/* DUMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
-	public boolean verifySignature( String plaintext, String signature )
+	/*public boolean verifySignature( String plaintext, String signature )
 	{
 		if( !keyLoaded ) { parent.print("Pas de clés"); return false; }
 		try	{
@@ -156,34 +179,10 @@ public class PKI
 			bos.write( ( byte )i );
 		}
 		return bos.toByteArray();
-	}
+	}*/
 
 	// GETTER / SETTER
 	public PrivateKey getPrivateKey() { return privateKey; }
-	//public void setPrivateKey(PrivateKey privateKey) { this.privateKey = privateKey; }
 	public PublicKey getPublicKey() { return publicKey; }
-	//public void setPublicKey(PublicKey publicKey) { this.publicKey = publicKey; }
 	public boolean isKeyLoaded() { return keyLoaded; }
-	//public void setKeyLoaded(boolean keyLoaded) { this.keyLoaded = keyLoaded; }
-
-	/*public static void test(HelloAndroid ha)
-	{
-		PKI pki = new PKI();
-		pki.generateKeys();
-		String data = "This is a test";
-		String baddata = "This is an test";
-		String signature = pki.sign( data );
-		String badSignature = signature.substring( 0, signature.length() - 1 ) + "1";
-		boolean verifies = pki.verifySignature( data, signature );
-		boolean verifiesBad = pki.verifySignature( data, badSignature );
-		boolean verifiesBad2 = pki.verifySignature( baddata, signature );
-
-		ha.print( "Texte: " + data );
-		ha.print( "Mauvais texte: " + baddata );
-		ha.print( "Signature du texte: " + signature );
-		ha.print( "Verification texte-signature (true): " + verifies );
-		ha.print( "Fausse signature: " + badSignature );
-		ha.print( "Verification texte-fausse signature (false): " + verifiesBad );
-		ha.print( "Verification faux texte-signature (false): " + verifiesBad2 );
-	}*/
 }

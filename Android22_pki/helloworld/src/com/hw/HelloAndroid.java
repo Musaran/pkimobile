@@ -1,25 +1,20 @@
 package com.hw;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
-import java.security.KeyFactory;
+import java.net.URLConnection;
 import java.security.PublicKey;
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.security.spec.X509EncodedKeySpec;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HelloAndroid extends Activity implements OnClickListener
 {
@@ -88,12 +83,12 @@ public class HelloAndroid extends Activity implements OnClickListener
 	public void keyGetServer()
 	{
 		long start = System.currentTimeMillis();
-		String rawserver = getURL("http://williamjouot.com/pki/public.der");
-		this.print(rawserver);
+		getURL("http://williamjouot.com/pki/public.der", "temp.l");
 		long duration = System.currentTimeMillis() - start;
 		this.print("Clé publique reçue en "+duration+"ms.");
-		//serverKey = pkiKeys.getPublicKeyFromText(rawserver);
-		//this.print("Pub: "+serverKey.getFormat()+" - "+serverKey.getEncoded());
+		serverKey = pkiKeys.getPublicKeyFromFile("temp.l");
+		this.print("Pub: "+serverKey.getFormat()+" - "+serverKey.getEncoded());
+		deleteFile("temp.l");
 	}
 	
 	public void keySetServer()
@@ -103,17 +98,34 @@ public class HelloAndroid extends Activity implements OnClickListener
 	
 	public void keyConnect()
 	{
-		// On signe un message CHALLENGE
-		long start = System.currentTimeMillis();
-		String si = pkiKeys.getSignature("CHALLENGE");
-		long duration = System.currentTimeMillis() - start;
-		this.print("Signé 'CHALLENGE' en "+duration+"ms.");
-		
-		// On le crypte avec la clé publique du serveur
-		start = System.currentTimeMillis();
-		String en = pkiKeys.encryptText(si, pkiKeys.getPublicKey());
-		long duration2 = System.currentTimeMillis() - start;
-		this.print("Chiffrage en "+duration2+"ms: "+en);
+		if(serverKey != null)
+		{
+			byte[] message = "CHALLENGE".getBytes();
+			
+			// On signe un message CHALLENGE
+			long start = System.currentTimeMillis();
+			byte[] sign = pkiKeys.getSignature(message);
+			long duration = System.currentTimeMillis() - start;
+			this.print("Signé 'CHALLENGE' en "+duration+"ms.");
+			
+			// On concat les deux array de byte
+			// Apparement rien dans l'API java permet de le faire automatiquement. Go mains nues :
+			byte[] inter = ";-;".getBytes(); // Signe entre la signature et le message
+			byte[] msgfinal = new byte[sign.length + inter.length + message.length];
+			System.arraycopy(sign, 0, msgfinal, 0, sign.length);
+			System.arraycopy(inter, 0, msgfinal, sign.length, inter.length);
+			System.arraycopy(message, 0, msgfinal, (sign.length + inter.length), message.length); 
+			
+			// On le crypte avec la clé publique du serveur
+			start = System.currentTimeMillis();
+			byte[] en = pkiKeys.encryptText(msgfinal, serverKey);
+			long duration2 = System.currentTimeMillis() - start;
+			this.print("Chiffrage en "+duration2+"ms: "+en);
+			
+			// Y a plus qu'à envoyer
+		}
+		else
+			Toast.makeText(getApplicationContext(), "No Server Key", Toast.LENGTH_SHORT).show();
 	}
 
 	public void keyLoadFromFile()
@@ -152,23 +164,22 @@ public class HelloAndroid extends Activity implements OnClickListener
 	}
 	
 	/* ------------- UTILS ---------------- */
-	public String getURL(String urlarg)
+	public void getURL(String urlarg, String filename)
 	{
-		String res = "";
-		try {
-			URL u;
-			InputStream is = null;
-			DataInputStream dis;
-			String s;
-			u = new URL(urlarg);
-			is = u.openStream();
-			dis = new DataInputStream(new BufferedInputStream(is));
-			while ((s = dis.readLine()) != null) {
-				res += s;
-			}
-			is.close();
+		// BEAUCOUP plus simple d'enregistrer dans un fichier temporaire
+		// En effet si on fait une string au lieu de byte[], ça ne marche pas.
+		try
+		{
+			URL url = new URL(urlarg);
+			URLConnection connection = url.openConnection();
+			InputStream input = connection.getInputStream();
+			FileOutputStream writeFile = openFileOutput(filename, Context.MODE_PRIVATE);//new FileOutputStream(filename);
+			byte[] buffer = new byte[1024];
+			int read;
+			while ((read = input.read(buffer)) > 0)
+				writeFile.write(buffer, 0, read);
+			writeFile.flush();
 		}
 		catch (Exception e) {e.printStackTrace();}
-		return res;
 	}
 }
