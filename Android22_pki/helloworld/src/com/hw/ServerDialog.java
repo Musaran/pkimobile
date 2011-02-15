@@ -47,7 +47,8 @@ public class ServerDialog
 			try {
 				//versServeur.write(message); //versServeur.print( message );
 				toServer.write(message);
-				toServer.flush();
+				//toServer.flush();
+				
 			} catch (IOException e) {e.printStackTrace();}
 		}
 	}
@@ -58,7 +59,7 @@ public class ServerDialog
 		{
 			boolean ok = true;
 			long now = System.currentTimeMillis();
-			byte[] res = null;
+			byte[] res = new byte[65534];
 			
 			while( ok )
 			{
@@ -72,7 +73,7 @@ public class ServerDialog
 					try
 					{
 						//line = depuisServeur.readLine();
-						fromServer.readFully(res);
+						fromServer.read(res);
 					}
 					catch( Exception e ){e.printStackTrace();}
 				}

@@ -109,10 +109,10 @@ public class PKI
 		try
 		{
 			DataOutputStream eOutRSA = new DataOutputStream(parent.openFileOutput("temp.m", Context.MODE_PRIVATE));//new FileOutputStream("temp"));
-			Cipher cf = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+			Cipher cf = Cipher.getInstance("RSA/ECB/PKCS1Padding"); // NoPadding
 			cf.init(Cipher.ENCRYPT_MODE, pub);
 			// TODO: Ca bug, le but est de découper des morceaux de 117 bytes (car clé de 1024 donc ((1024 / 8) - 11) bytes)
-			int bigcount = 0;
+			/*int bigcount = 0;
 			for(int i = 0; i < btext.length; i+=117)
 			{
 				byte[] te = new byte[117]; int count = 0;
@@ -128,8 +128,11 @@ public class PKI
 				
 				byte[] encodedMsg = cf.doFinal(te);
 				eOutRSA.write(encodedMsg, 0, encodedMsg.length);
-			}
-			parent.print(bigcount+" bytes encodés.");
+			}*/
+			cf.update(btext);
+			byte[] encodedMsg = cf.doFinal();
+			eOutRSA.write(encodedMsg, 0, encodedMsg.length);
+			//parent.print(bigcount+" bytes encodés.");
 			eOutRSA.close();
 			byte[] res = parent.getFile("temp.m");
 			parent.deleteFile("temp.m");
@@ -152,33 +155,6 @@ public class PKI
 			return verifies;
 		}catch( Exception e ){e.printStackTrace();}
 		return false;
-	}
-
-	private static String getString( byte[] bytes )
-	{
-		StringBuffer sb = new StringBuffer();
-		for( int i=0; i<bytes.length; i++ )
-		{
-			byte b = bytes[ i ];
-			sb.append( ( int )( 0x00FF & b ) );
-			if( i+1 <bytes.length )
-			{
-				sb.append( "-" );
-			}
-		}
-		return sb.toString();
-	}
-
-	private static byte[] getBytes( String str )
-	{
-		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		StringTokenizer st = new StringTokenizer( str, "-", false );
-		while( st.hasMoreTokens() )
-		{
-			int i = Integer.parseInt( st.nextToken() );
-			bos.write( ( byte )i );
-		}
-		return bos.toByteArray();
 	}*/
 
 	// GETTER / SETTER
