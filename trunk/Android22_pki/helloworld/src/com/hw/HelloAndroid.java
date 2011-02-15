@@ -47,11 +47,16 @@ public class HelloAndroid extends Activity implements OnClickListener
    		textArea.append("\n"+text);
     }
     
+    public void clearText()
+    {
+    	textArea.setText("");
+    }
+    
     public void getMenu()
     {
     	if(pkiKeys.isKeyLoaded())
     	{
-	    	final CharSequence[] items = {"Regénérer", "Get Pub Server", "Env. pub cl", "Connexion"};
+	    	final CharSequence[] items = {"Regénérer", "Recharger", "Get Pub Server", "Env. pub cl", "Connexion", "Clear"};
 	    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    	builder.setTitle("Menu");
 	    	builder.setItems(items, new MenuListener(this));
@@ -87,7 +92,7 @@ public class HelloAndroid extends Activity implements OnClickListener
 		long duration = System.currentTimeMillis() - start;
 		this.print("Clé publique reçue en "+duration+"ms.");
 		serverKey = pkiKeys.getPublicKeyFromFile("temp.l");
-		this.print("Pub: "+serverKey.getFormat()+" - "+serverKey.getEncoded());
+		//this.print("Pub: "+serverKey.getFormat()+" - "+serverKey.getEncoded());
 		deleteFile("temp.l");
 	}
 	
@@ -116,15 +121,29 @@ public class HelloAndroid extends Activity implements OnClickListener
 			System.arraycopy(inter, 0, msgfinal, sign.length, inter.length);
 			System.arraycopy(message, 0, msgfinal, (sign.length + inter.length), message.length); 
 			
+			// DEBUG
+			String l = "";
+			for(int i=0; i < 20; i++)
+				l += msgfinal[i]+"/";
+			this.print(l);
+			
 			// On le crypte avec la clé publique du serveur
 			start = System.currentTimeMillis();
 			byte[] en = pkiKeys.encryptText(msgfinal, serverKey);
 			long duration2 = System.currentTimeMillis() - start;
-			this.print("Chiffrage en "+duration2+"ms: "+en);
+			//this.clearText();
+			this.print("Chiffrage en "+duration2+"ms.");//: [0]"+en[0]+" [H]"+en.hashCode());
+			
+			// DEBUG
+			/*String l = "";
+			for(int i=0; i < en.length; i++)
+				l += en[i]+"/";
+			this.print(l);*/
 			
 			// Y a plus qu'à envoyer
 			start = System.currentTimeMillis();
 			ServerDialog sd = new ServerDialog();
+			this.print(en.length+" bytes à envoyer...");
 			byte[] response = sd.getFromServer("192.168.0.21", 1023, en);
 			long duration3 = System.currentTimeMillis() - start;
 			this.print("Envoi et réponse serveur en "+duration3+"ms : "+response);
@@ -139,7 +158,7 @@ public class HelloAndroid extends Activity implements OnClickListener
 		pkiKeys.loadKeysFromFile();
 		long duration = System.currentTimeMillis() - start;
 		this.print("Clés chargées en "+duration+"ms.");
-		this.print("Clé publique: "+pkiKeys.getPublicKey().getEncoded());
+		//this.print("Clé publique: "+pkiKeys.getPublicKey().getEncoded());
 	}
 	
 	/* ------------- STORAGE -------------- */

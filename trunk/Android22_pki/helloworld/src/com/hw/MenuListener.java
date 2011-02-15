@@ -18,9 +18,11 @@ public class MenuListener implements OnClickListener
 		switch(item)
 		{
 			case 0: parent.keyGen(); break;
-			case 1: parent.keyGetServer(); break;
-			case 2: parent.keySetServer(); break;
-			case 3: parent.keyConnect(); break;
+			case 1: parent.keyLoadFromFile(); break;
+			case 2: parent.keyGetServer(); break;
+			case 3: parent.keySetServer(); break;
+			case 4: parent.keyConnect(); break;
+			case 5: parent.clearText(); break;
 		}
 	}
 
