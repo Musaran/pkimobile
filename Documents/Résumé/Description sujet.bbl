@@ -23,4 +23,12 @@ Y.~Lei, A.~Quintero, and S.~Pierre, ``Mobile services access and payment
   through reusable tickets,'' {\em Computer Communications}, vol.~32,
   pp.~602--610, 2009.
 
+\bibitem{Kouril2006}
+D.~Kouril, L.~Matyska, and M.~Prochazka, ``Kerberos and pki cooperation,''
+  2006.
+
+\bibitem{Oppliger}
+R.~Oppliger, ``Authentication and authorization infrastructures: Kerberos vs.
+  pki,''
+
 \end{thebibliography}

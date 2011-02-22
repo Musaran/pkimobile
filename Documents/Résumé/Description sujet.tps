@@ -24,17 +24,17 @@ Class=CLatexEdit
 Document=Description sujet.tex
 
 [Frame0_Row0]
-cyCur=493
+cyCur=459
 cyMin=10
 
 [Frame0_Col0]
-cxCur=1053
+cxCur=1213
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=105
-Cursor.column=31
-TopSubLine=123
+Cursor.row=118
+Cursor.column=40
+TopSubLine=152
 
 [Frame1]
 Columns=1
