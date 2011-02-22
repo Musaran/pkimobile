@@ -24,6 +24,8 @@ public class HelloAndroid extends Activity implements OnClickListener
 	
 	private PublicKey serverKey = null;
 	
+	public String ipServer = "192.168.0.18";
+	
 	/* -------------------- GUI -------------------- */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -98,7 +100,40 @@ public class HelloAndroid extends Activity implements OnClickListener
 	
 	public void keySetServer()
 	{
-		
+		if(serverKey != null)
+		{
+			byte[] a = {2}; // 2 = SetKey
+			byte[] key = pkiKeys.getPublicKey().getEncoded();
+			byte[] msgfinal = new byte[1 + key.length];
+			System.arraycopy(a, 0, msgfinal, 0, 1);
+			System.arraycopy(key, 0, msgfinal, 1, key.length);
+			this.print("Envoi de la cle au serveur...");
+			
+			// DEBUG
+			// ----------------------------------
+			/*String l = "";
+			for(int i=0; i < msgfinal.length; i++)
+				l += msgfinal[i]+"/";
+			this.print("Cle envoyee: " + l);*/
+			// ----------------------------------
+			
+			// On le crypte avec la clé publique du serveur
+			long start = System.currentTimeMillis();
+			byte[] en = pkiKeys.encryptText(msgfinal, serverKey);
+			long duration2 = System.currentTimeMillis() - start;
+			//this.clearText();
+			this.print("Chiffrage en "+duration2+"ms.");//: [0]"+en[0]+" [H]"+en.hashCode());
+			
+			ServerDialog sd = new ServerDialog();
+			byte[] response = sd.getFromServer(ipServer, 1023, en);
+			
+			if(response[0] == 1)
+				this.print("OK!");
+			else
+				this.print("Erreur!");
+		}
+		else
+			Toast.makeText(getApplicationContext(), "No Server Key", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void keyConnect()
@@ -115,17 +150,24 @@ public class HelloAndroid extends Activity implements OnClickListener
 			
 			// On concat les deux array de byte
 			// Apparement rien dans l'API java permet de le faire automatiquement. Go mains nues :
+			/*
 			byte[] inter = ";-;".getBytes(); // Signe entre la signature et le message
 			byte[] msgfinal = new byte[sign.length + inter.length + message.length];
 			System.arraycopy(sign, 0, msgfinal, 0, sign.length);
 			System.arraycopy(inter, 0, msgfinal, sign.length, inter.length);
-			System.arraycopy(message, 0, msgfinal, (sign.length + inter.length), message.length); 
+			System.arraycopy(message, 0, msgfinal, (sign.length + inter.length), message.length);
+			*/
+			byte[] a = {1}; // 1 = Connexion
+			byte[] msgfinal = new byte[message.length + 1 + sign.length];
+			System.arraycopy(a, 0, msgfinal, 0, 1);
+			System.arraycopy(message, 0, msgfinal, 1, message.length);
+			System.arraycopy(sign, 0, msgfinal, (1 + message.length), sign.length);
 			
 			// DEBUG
-			String l = "";
+			/*String l = "";
 			for(int i=0; i < 20; i++)
 				l += msgfinal[i]+"/";
-			this.print(l);
+			this.print(l);*/
 			
 			// On le crypte avec la clé publique du serveur
 			start = System.currentTimeMillis();
@@ -135,16 +177,18 @@ public class HelloAndroid extends Activity implements OnClickListener
 			this.print("Chiffrage en "+duration2+"ms.");//: [0]"+en[0]+" [H]"+en.hashCode());
 			
 			// DEBUG
+			// ----------------------------------
 			/*String l = "";
 			for(int i=0; i < en.length; i++)
 				l += en[i]+"/";
 			this.print(l);*/
+			// ----------------------------------
 			
 			// Y a plus qu'à envoyer
 			start = System.currentTimeMillis();
 			ServerDialog sd = new ServerDialog();
 			this.print(en.length+" bytes à envoyer...");
-			byte[] response = sd.getFromServer("192.168.0.21", 1023, en);
+			byte[] response = sd.getFromServer(ipServer, 1023, en);
 			long duration3 = System.currentTimeMillis() - start;
 			this.print("Envoi et réponse serveur en "+duration3+"ms : "+response);
 		}

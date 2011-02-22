@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -23,6 +24,7 @@ public class Server implements Runnable
 	{
 		try
 		{
+			System.out.println(" [*] Recuperation des cles du serveur...");
 			// On recupere notre cle privee, du serveur.
 			URL url = new URL("http://williamjouot.com/pki/private.der");
 			URLConnection connection = url.openConnection();
@@ -40,7 +42,7 @@ public class Server implements Runnable
 			this.privateKey = keyFactory.generatePrivate(privateKeySpec);
 			
 			// On lance le serveur
-			System.out.println( "Demarrage du serveur [port: " + iPort + "]..." );
+			System.out.println( " [*] Demarrage du serveur [port: " + iPort + "]..." );
 			sServeur = new ServerSocket( iPort );
 			new Thread( this ).start();
 		}
@@ -49,7 +51,7 @@ public class Server implements Runnable
 	
 	public void run()
 	{
-		System.out.println( "Demarrage de l'ecoute..." );
+		System.out.println( " [*] Demarrage de l'ecoute..." );
 		try
 		{
 			for (;;)
@@ -65,6 +67,12 @@ public class Server implements Runnable
 		return privateKey;
 	}
 	
+	public boolean isFileExists(String filename)
+	{
+		File f = new File(filename);
+		return f.exists();
+	}
+	
 	public byte[] getFile(String filename)
 	{
 		try
@@ -77,5 +85,16 @@ public class Server implements Runnable
 		}
 		catch (Exception e) {e.printStackTrace();}
 		return null;
+	}
+	
+	public void setFile(String filename, byte[] content)
+	{
+		try
+		{
+			FileOutputStream fis = new FileOutputStream(filename);
+			fis.write(content);
+			fis.close();
+		}
+		catch (Exception e) {e.printStackTrace();}
 	}
 }
