@@ -47,6 +47,14 @@
   timestamp = {2010.10.05}
 }
 
+@ARTICLE{Kouril2006,
+  author = {Kouril, Daniel and Matyska, Ludek and Prochazka, Michal},
+  title = {Kerberos ans PKI Cooperation},
+  year = {2006},
+  owner = {Musa},
+  timestamp = {2011.02.22}
+}
+
 @ARTICLE{YongLee2006,
   author = {Lee, Yong and Lee, Jeail and Song, JooSeok},
   title = {Design and implementation of wireless PKI technology suitable
@@ -94,6 +102,13 @@
   pages = {245-255},
   owner = {Musa},
   timestamp = {2010.10.05}
+}
+
+@MANUAL{WMLScript,
+  title = {WMLScript Crypto API Library: WAP-161-WMLScriptCrypto-20010620},
+  owner = {Musa},
+  timestamp = {2010.11.09},
+  url = {http://www.openmobilealliance.org/tech/affiliates/wap/wapindex.html}
 }
 
 @comment{jabref-meta: selector_publisher:}
