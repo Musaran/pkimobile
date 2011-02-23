@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  22 FEB 2011 22:05
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  23 FEB 2011 22:01
 entering extended mode
 **D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description*sujet.tex
 ("D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description sujet.tex"
@@ -318,29 +318,31 @@ File: images/6.jpg Graphic file (type jpg)
 <images/tablecomparaison.jpg, id=29, 619.56468pt x 299.61937pt>
 File: images/tablecomparaison.jpg Graphic file (type jpg)
 
-<use images/tablecomparaison.jpg>
-Underfull \vbox (badness 1189) has occurred while \output is active []
+<use images/tablecomparaison.jpg> [7]
+<images/graphique.PNG, id=34, 787.44188pt x 493.845pt>
+File: images/graphique.PNG Graphic file (type png)
 
- [7]
-("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl")
+<use images/graphique.PNG>
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl"
 [8 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/tablecomparaison.jpg
->] ("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") ) 
+> <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/graphique.PNG>])
+[9] ("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") )
+ 
 Here is how much of TeX's memory you used:
- 2500 strings out of 495285
- 31690 string characters out of 3180385
+ 2506 strings out of 495285
+ 31806 string characters out of 3180385
  93409 words of memory out of 3000000
- 5667 multiletter control sequences out of 15000+200000
+ 5671 multiletter control sequences out of 15000+200000
  34927 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,5n,24p,1011b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/M
-iKTeX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts
-/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/
-utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Description sujet.pdf" (8 pages, 736619 bytes).
+{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/
+MiKTeX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/font
+s/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times
+/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Description sujet.pdf" (9 pages, 768550 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
