@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:stretchColumns="1"
     >
-    <Button android:id="@+id/buttonmenu"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="Menu" />
+    <TableRow>
+    	<EditText android:text="192.168.0.18"
+    		android:id="@+id/iAdress"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content" />
+    	<Button android:id="@+id/buttonmenu"
+	    	android:layout_column="1"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Menu" />
+    </TableRow>
+	<View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
 	<TextView android:id="@+id/tv"
 	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content" 
 	    android:text="@string/hello" />
-</LinearLayout>
+</TableLayout>
