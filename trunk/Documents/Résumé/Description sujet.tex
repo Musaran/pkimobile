@@ -111,20 +111,21 @@ Evidemment, chacunes des techniques PKI ou Kerberos présentent des désavantages 
 
 \section{Objectifs et perspectives du projet de synthèse}
 
-Notre objectif est d'implémenter le déploiement automatique d'un système de certification pour mobile. Pour cela, nous allons devoir implémenter une solution de PKI pour mobile, et une solution Kerberos pour mobile. Ainsi, nous pourrons comparer de manière fonctionnelle les deux systèmes et choisir le plus efficace.
+Notre objectif était d'implémenter le déploiement automatique d'un système de certification pour mobile. Pour cela, nous devions implémenter une solution de PKI pour mobile, et une solution Kerberos pour mobile. Ainsi, nous pouvons comparer de manière fonctionnelle les deux systèmes et choisir le plus efficace.
 Dans le cas de Kerberos, le but est de créer un petit client, capable de se connecter à un centre d'authentification Kerberos pour ensuite avoir un ticket pour un service demandé.
 
-\section{Premiers essais}
-
-Nous avons commencé à implémenter une solution de PKI. Seules les méthodes de génération de clés, et de signatures sont pour le moment présentes. Le but de cette première implémentation était de pouvoir manipuler et vérifier le fonctionnement des fonctions de bases pour les clés publiques et privés.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.40\textwidth,height=0.60\textwidth]{6.jpg}
-\caption{Début d'implementation}
+\caption{Nos début d'implementation}
 \end{figure}
 
-Coté Kerberos, nous avons réussi à créer un serveur Kerberos, basé pour l'instant uniquement sur des utilisateurs crées manuellement, et à créer un client Java capable de se connecter sur ce serveur pour récupérer, après quelques échanges, un ticket de service. La prochaine étape est de, premièrement, convertir le projet pour qu'il fonctionne sur Android, et ensuite de créer un service, compatible Kerberos, comme par exemple une session SSH, pour que le téléphone puisse se connecter dessus.
+Nous avions commencé à implémenter une solution de PKI. Seules les méthodes de génération de clés, et de signatures étaient présentes. Le but de cette première implémentation était de pouvoir manipuler et vérifier le fonctionnement des fonctions de bases pour les clés publiques et privés.
+
+Coté Kerberos, nous avions réussi à créer un serveur Kerberos, basé uniquement sur des utilisateurs crées manuellement, et à créer un client Java capable de se connecter sur ce serveur pour récupérer, après quelques échanges, un ticket de service. Selon nos espérances, la prochaine étape était de, premièrement, convertir le projet pour qu'il fonctionne sur Android, et ensuite de créer un service, compatible Kerberos, comme par exemple une session SSH, pour que le téléphone puisse se connecter dessus.
+
+Malheureusement, nous n'avons pas pu réaliser cette partie du projet. Nous détaillerons tout cela, un peu plus tard.
 
 \section{Critères de comparaison}
 
@@ -183,6 +184,7 @@ Nous avons réalisé une série de test, notamment la génération des clés publiques
 \caption{Génération des clés sur 50 essais}
 \end{figure}
 
+Cette figure montre sur 50 tentatives, le temps mis pour la génération de clés. En moyenne on s'aperçoit que l'application met un peu moins d'une seconde pour générer ses clés publique et privée.
 
 \bibliographystyle{ieeetr}
 \bibliography{biblio}
