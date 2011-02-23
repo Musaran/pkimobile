@@ -25,19 +25,18 @@ public class PKI
 	
 	private final String filePrivate = "private.key";
 	private final String filePublic = "public.key";
-	
-	private final String cAlgorithm = "RSA"; // DSA
-	private final String sAlgorithm = "SHA1withRSA"; //SHA1withDSA
 
 	public PKI(HelloAndroid ha){parent = ha;}
 	
 	/* -------------------- KEYS MANAGEMENT -------------------- */
-	// Generate Keys
+	/**
+	 * This function generates a pair of keys
+	 */
 	public void generateKeys()
 	{
 		try
 		{
-			KeyPairGenerator keyGen = KeyPairGenerator.getInstance(cAlgorithm);
+			KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
 			keyGen.initialize( 1024 );
 			KeyPair pair = keyGen.generateKeyPair();
 			privateKey = pair.getPrivate();
@@ -47,22 +46,30 @@ public class PKI
 		catch(Exception e) {e.printStackTrace(); keyLoaded = false;}
 	}
 	
-	// Load keys from file
+	/**
+	 * This function try to load the private and the public key from specific file on the phone
+	 */
 	public void loadKeysFromFile()
 	{
 		try
 		{
-			KeyFactory keyFactory = KeyFactory.getInstance(cAlgorithm);
+			// Public key
+			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(parent.getFile(filePublic));
 			publicKey  = keyFactory.generatePublic(publicKeySpec);
+			
+			// Private key
 			PKCS8EncodedKeySpec privateKeySpec = new PKCS8EncodedKeySpec(parent.getFile(filePrivate));
 			privateKey = keyFactory.generatePrivate(privateKeySpec);
+			
 			keyLoaded = true;
 		}
 		catch(Exception e) {e.printStackTrace(); keyLoaded = false;}
 	}
 	
-	// Save keys to file
+	/**
+	 * This function store the current keys into files for further uses
+	 */
 	public void saveKeysToFile()
 	{
 		if(keyLoaded)
@@ -74,11 +81,16 @@ public class PKI
 		}
 	}
 	
+	/**
+	 * This function return a public key which is read drom a file
+	 * @param filename the file containing the public key
+	 * @return the public key
+	 */
 	public PublicKey getPublicKeyFromFile(String filename)
 	{
 		try
 		{
-			KeyFactory keyFactory = KeyFactory.getInstance(cAlgorithm);
+			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(parent.getFile(filename));
 			return(keyFactory.generatePublic(publicKeySpec));
 		}
@@ -86,32 +98,63 @@ public class PKI
 		return null;
 	}
 
-	/* -------------------- KEYS OPERATIONS -------------------- */
-	public byte[] getSignature( byte[] text )
+	/* ---------------------------------------------------------------------------------- */
+	/* ---------------------------------------------------------------------------------- */
+	/* ---------------------------------      PKI       --------------------------------- */
+	/* ---------------------------------------------------------------------------------- */
+	/* ---------------------------------------------------------------------------------- */
+	/**
+	 * Verify if the signature is the good one
+	 * @param text	the signed text
+	 * @param sign	the signature
+	 * @param pub	the public key used to verify the signature
+	 * @return		true if the signature is the good one
+	 */
+	public boolean verifySignature( byte[] text, byte[] sign, PublicKey pub )
 	{
-		if(keyLoaded)
+		try {
+			Signature rsa = Signature.getInstance("SHA1withRSA");
+			rsa.initVerify( pub );
+			rsa.update( text );
+			boolean res = rsa.verify( sign );
+			return res;
+		}catch( Exception e ){e.printStackTrace();}
+		return false;
+	}
+	
+	/**
+	 * Get the signature of a text
+	 * @param text	the text which must be signed
+	 * @param pri	the private key
+	 * @return		the signature
+	 */
+	public byte[] getSignature( byte[] text, PrivateKey pri )
+	{
+		try
 		{
-			try
-			{
-				Signature dsa = Signature.getInstance(sAlgorithm);
-				dsa.initSign( privateKey );
-				dsa.update( text );
-				byte[] signature = dsa.sign();
-				return signature;
-			}
-			catch( Exception e ){e.printStackTrace();}
+			Signature dsa = Signature.getInstance("SHA1withRSA");
+			dsa.initSign( pri );
+			dsa.update( text );
+			byte[] signature = dsa.sign();
+			return signature;
 		}
+		catch( Exception e ){e.printStackTrace();}
 		return null;
 	}
 	
+	/**
+	 * Encrypt a text
+	 * @param btext	the text which must be crypted
+	 * @param pub	the public key
+	 * @return		the crypted text
+	 */
 	public byte[] encryptText( byte[] btext, Key pub )
 	{
 		try
 		{
-			DataOutputStream eOutRSA = new DataOutputStream(parent.openFileOutput("temp.m", Context.MODE_PRIVATE));//new FileOutputStream("temp"));
+			DataOutputStream eOutRSA = new DataOutputStream(parent.openFileOutput("temp.m", Context.MODE_PRIVATE));
 			Cipher cf = Cipher.getInstance("RSA/ECB/PKCS1Padding"); // NoPadding
 			cf.init(Cipher.ENCRYPT_MODE, pub);
-			// TODO: Ca bug, le but est de découper des morceaux de 117 bytes (car clé de 1024 donc ((1024 / 8) - 11) bytes)
 			/*int bigcount = 0;
 			for(int i = 0; i < btext.length; i+=117)
 			{
@@ -141,21 +184,6 @@ public class PKI
 		catch( Exception e ){e.printStackTrace();}
 		return null;
 	}
-
-	/* DUMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP */
-	/*public boolean verifySignature( String plaintext, String signature )
-	{
-		if( !keyLoaded ) { parent.print("Pas de clés"); return false; }
-		try	{
-			Signature dsa = Signature.getInstance(sAlgorithm);
-			dsa.initVerify( publicKey );
-			dsa.update( plaintext.getBytes() );
-			boolean verifies = dsa.verify( getBytes( signature ) );
-			//System.out.println("signature verifies: " + verifies);
-			return verifies;
-		}catch( Exception e ){e.printStackTrace();}
-		return false;
-	}*/
 
 	// GETTER / SETTER
 	public PrivateKey getPrivateKey() { return privateKey; }
