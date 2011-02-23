@@ -143,6 +143,11 @@ La création d'un serveur Kerberos n'était pas une masse à faire.
 \section{Implémentation}
 
 \subsection{La PKI}
+Nous avons du developper notre application de PKI pour android, ainsi qu'un serveur Java sur lequel notre application se connecte.
+Notre application android est complète, c'est à dire qu'il est capable de générer ses propres clés, les sauvegarder ou bien charger des clés deja stockées. Il est capable d'envoyer sa clé publique à notre serveur.
+Il peut récupérer les clés publiques de serveur. Et bien sur, il peut signer et crypter un message.
+
+De son côté, le serveur peut réceptionner une clé publique, et ainsi déchiffrer et vérifier la signature du message envoyé via notre application et le message en lui même.
 
 \subsection{Kerberos}
 
@@ -168,6 +173,15 @@ Dans ces deux cas, on voit nettement que la PKI est plus intéressante à utiliser
 Va-t-on avoir les mêmes résultats pour notre cas, sur mobile ?
 
 \subsection{Pour notre problème}
+
+Côté PKI, nous avons de très bons résultats. Nos tests ont été réalisés sur l'émulateur android fourni avec l'API et sur une tablette tactile fonctionnant sous android.
+Nous avons réalisé une série de test, notamment la génération des clés publiques et privée.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.70\textwidth,height=0.40\textwidth]{graphique.PNG}
+\caption{Génération des clés sur 50 essais}
+\end{figure}
 
 
 \bibliographystyle{ieeetr}
