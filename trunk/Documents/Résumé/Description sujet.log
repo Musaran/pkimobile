@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  24 FEB 2011 21:49
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  24 FEB 2011 22:23
 entering extended mode
 **D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description*sujet.tex
 ("D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description sujet.tex"
@@ -315,15 +315,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/6.jpg Graphic file (type jpg)
  <use images/6.jpg> [6 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/
 6.jpg>] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 175--183
+
+ []
+
 <images/tablecomparaison.jpg, id=33, 619.56468pt x 299.61937pt>
 File: images/tablecomparaison.jpg Graphic file (type jpg)
 
-<use images/tablecomparaison.jpg>
-<images/graphique.PNG, id=34, 787.44188pt x 493.845pt>
+<use images/tablecomparaison.jpg> [8 <D:/Taff/M2/pkimobile/svn/trunk/Documents/
+Résumé/images/tablecomparaison.jpg>]
+<images/graphique.PNG, id=37, 787.44188pt x 493.845pt>
 File: images/graphique.PNG Graphic file (type png)
 
-<use images/graphique.PNG> [8 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/
-images/tablecomparaison.jpg>]
+<use images/graphique.PNG>
 <images/stat2.jpg, id=39, 609.02531pt x 371.13657pt>
 File: images/stat2.jpg Graphic file (type jpg)
  <use images/stat2.jpg>
@@ -333,28 +337,73 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/stat3.jpg, id=44, 563.10374pt x 373.395pt>
 File: images/stat3.jpg Graphic file (type jpg)
  <use images/stat3.jpg>
-("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl"
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--251
+
+ []
+
+[10 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat2.jpg> <D:/Taff
+/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 253--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--259
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat2.jpg> <D:/Taf
-f/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat3.jpg>]) [11]
-("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") ) 
+ [11]
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl")
+[12] ("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") 
+) 
 Here is how much of TeX's memory you used:
  2516 strings out of 495285
  31990 string characters out of 3180385
- 95409 words of memory out of 3000000
+ 94409 words of memory out of 3000000
  5679 multiletter control sequences out of 15000+200000
  34927 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,5n,24p,1011b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/
-Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
-eX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/ty
-pe1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utm
-r8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Description sujet.pdf" (11 pages, 866701 bytes).
+{C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files
+/MiKTeX 2.8/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.8/fon
+ts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/time
+s/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Description sujet.pdf" (12 pages, 870029 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
