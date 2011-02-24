@@ -131,14 +131,29 @@ Malheureusement, nous n'avons pas pu réaliser cette partie du projet. Nous détai
 
 Notre sujet était d'exporter deux méthodes d'authentification pour machines traditionnelles sur des téléphones mobiles et de les comparer.
 
+Nous avons décidé de tester et comparer ses deux protocoles sur quelques aspects :
+\begin{itemize}
+\item Implémentation
+\item Rapidité d'execution
+\item Interaction avec l'humain
+\item Sécurité du protocole
+\item Solidité du protocole
+\item Scalabilité
+\end{itemize}
 
 \section{Problèmes rencontrés}
 
 \subsection{La PKI}
+Nous n'avons pas rencontré de rééls problèmes pour le développement de notre client PKI. Les classes Java de bases et celle d'Android nous ont permis de réaliser cette partie sans soucis.
 
 \subsection{Kerberos}
 Comme nous l'avions mentionné dans notre premier rapport, nous sommes tombé sur un problème de taille, pour Kerberos.
-La création d'un serveur Kerberos n'était pas une masse à faire.
+La création d'un serveur Kerberos n'était pas une masse à faire. 
+Nombreux sont les tutoriaux sur Internet, mais aucun ne disait la même chose. Ainsi nous avons eu quelques soucis pour tout mettre en place côté serveur.
+
+Mais ce n'a pas été notre plus grand problème. Malheureusement, nous n'avons pas pu réalisé ce que nous avions prévu, à savoir convertir notre client Java classique pour un client Android. En effet l'API de Kerberos mis à disposition fonctionne très bien avec le Java traditionnel que l'on connait tous, mais elle n'est pas apprécié par le SDK d'Android. Toute une série d'incompatiblité de paquets, de classes s'est révélée, nous empêchant totalement de developper un client Kerberos pour Android.
+
+Nous aurions pu contourner le problème en réécrivant totalement les classes Kerberos que nous devions utiliser, ce qui aurait été un travail considérable.
 
 
 \section{Implémentation}
@@ -151,6 +166,7 @@ Il peut récupérer les clés publiques de serveur. Et bien sur, il peut signer et 
 De son côté, le serveur peut réceptionner une clé publique, et ainsi déchiffrer et vérifier la signature du message envoyé via notre application et le message en lui même.
 
 \subsection{Kerberos}
+Pour notre partie Kerberos
 
 \section{Comparaison des deux systèmes d'authentification}
 
@@ -180,11 +196,29 @@ Nous avons réalisé une série de test, notamment la génération des clés publiques
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.70\textwidth,height=0.40\textwidth]{graphique.PNG}
+\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{graphique.PNG}
 \caption{Génération des clés sur 50 essais}
 \end{figure}
 
 Cette figure montre sur 50 tentatives, le temps mis pour la génération de clés. En moyenne on s'aperçoit que l'application met un peu moins d'une seconde pour générer ses clés publique et privée.
+
+Nous avons réalisé des tests sur le chiffrement d'un message "CHALLENGE", pour faire des statistiques en terme de performances de temps. Lors de ces tests, nous avons mesuré, le temps de signature du message avec la clé privée de notre application Android, le temps de chiffrement du message avec la clé publique du serveur, et le temps de transmission du message signé et chiffré au serveur.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{stat2.jpg}
+\caption{50 essais de signature et de chiffrement du message "CHALLENGE"}
+\end{figure}
+
+Nos tests d'envoie du message au serveur se sont revelés plus excellent, d'une extreme rapidité.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{stat3.jpg}
+\caption{50 essais d'envoie du message}
+\end{figure}
+
+Comme mentionné plus haut, en 
 
 \bibliographystyle{ieeetr}
 \bibliography{biblio}
