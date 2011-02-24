@@ -184,6 +184,31 @@ public class PKI
 		catch( Exception e ){e.printStackTrace();}
 		return null;
 	}
+	
+	/**
+	 * Decrypt a message with a private key.
+	 * @param text	the text to decrypt
+	 * @param pri	the private key used to decrypt
+	 * @return		the text decrypted
+	 */
+	public byte[] decryptText( byte[] text, PrivateKey pri )
+	{
+		try
+		{
+			DataOutputStream eOutRSA = new DataOutputStream(parent.openFileOutput("temp.m", Context.MODE_PRIVATE));
+			Cipher cf = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+			cf.init(Cipher.DECRYPT_MODE, pri);
+			cf.update(text);
+			byte[] decodedMsg = cf.doFinal();
+			eOutRSA.write(decodedMsg, 0, decodedMsg.length);
+			eOutRSA.close();
+			byte[] res = parent.getFile("temp.m");
+			parent.deleteFile("temp.m");
+			return res;
+		}
+		catch( Exception e ){e.printStackTrace();}
+		return null;
+	}
 
 	// GETTER / SETTER
 	public PrivateKey getPrivateKey() { return privateKey; }

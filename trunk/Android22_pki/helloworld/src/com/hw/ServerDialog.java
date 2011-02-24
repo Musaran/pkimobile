@@ -59,7 +59,7 @@ public class ServerDialog
 		{
 			boolean ok = true;
 			long now = System.currentTimeMillis();
-			byte[] res = new byte[65534];
+			
 			
 			while( ok )
 			{
@@ -72,17 +72,17 @@ public class ServerDialog
 				{
 					try
 					{
-						//line = depuisServeur.readLine();
-						fromServer.read(res);
+						byte[] res = new byte[65534];
+						int nb = fromServer.read(res);
+						byte[] ret = new byte[nb];
+						for(int i=0; i < nb; i++) {	ret[i] = res[i]; }
+						return ret;
 					}
 					catch( Exception e ){e.printStackTrace();}
 				}
 			}
-			
-			return res;
 		}
-		else
-			return null;
+		return null;
 	}
 	
 	public byte[] getFromServer(String ip, int port, byte[] msg)

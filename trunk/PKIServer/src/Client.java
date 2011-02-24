@@ -93,7 +93,8 @@ class Client implements Runnable
 								byte[] msgfinal = new byte[ret.length + retsign.length];
 								System.arraycopy(ret, 0, msgfinal, 0, ret.length);
 								System.arraycopy(retsign, 0, msgfinal, ret.length, retsign.length);
-								this.send(encryptText(msgfinal, parent.getPublicKey()));
+								//this.send(encryptText(msgfinal, parent.getPublicKey()));
+								this.send(msgfinal);
 							}
 							else
 							{
@@ -145,6 +146,29 @@ class Client implements Runnable
 					this.send(res);
 				}
 			}
+			else if(decrypted[0] == 3)
+			{
+				// First byte is 3
+				try {
+					// We load the public key of the client
+					KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+					X509EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(parent.getFile("client.pub"));
+					PublicKey clp  = keyFactory.generatePublic(publicKeySpec);
+					System.out.println("[0x03] Cle chargee");
+					
+					// Encode and send
+					byte[] message = "MESSAGE_SECRET".getBytes();
+					this.send(encryptText(message, clp));
+					System.out.println("[0x03] Message envoye");
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+					System.out.println("[0x03] Envoi reponse 2");
+					byte[] res = {2};
+					this.send(res);
+				}
+			}
 			else
 				System.out.println("[?x??] Message inconnu.");
 			
@@ -183,7 +207,7 @@ class Client implements Runnable
 	public String printBytes(byte[] e)
 	{
 		String l = "";
-		int max = 20;
+		int max = e.length;
 		if(e.length < 20) max = e.length;
 		for(int i=0; i < max; i++) {
 			l += e[i]+"/";

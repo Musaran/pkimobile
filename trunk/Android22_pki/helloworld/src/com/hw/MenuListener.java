@@ -22,7 +22,9 @@ public class MenuListener implements OnClickListener
 			case 2: parent.keyGetServer(); break;
 			case 3: parent.keySetServer(); break;
 			case 4: parent.keyConnect(); break;
-			case 5: parent.clearText(); break;
+			case 5: parent.keyDecrypt(); break;
+			case 6: parent.keyAll(); break;
+			case 7: parent.clearText(); break;
 		}
 	}
 

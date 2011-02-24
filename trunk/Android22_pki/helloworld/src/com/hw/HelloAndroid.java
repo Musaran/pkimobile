@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.security.PublicKey;
+import java.util.Arrays;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -70,7 +72,7 @@ public class HelloAndroid extends Activity implements OnClickListener
     	if(pkiKeys.isKeyLoaded())
     	{
     		// If the keys are loaded we show the full menu
-	    	final CharSequence[] items = {"Regénérer", "Recharger", "Get Pub Server", "Env. pub cl", "Connexion", "Clear"};
+	    	final CharSequence[] items = {"Regénérer", "Recharger", "Get Pub Server", "Env. pub cl", "Connexion", "Decrypt", "TOUT", "Clear"};
 	    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    	builder.setTitle("Menu");
 	    	builder.setItems(items, new MenuListener(this));
@@ -191,13 +193,75 @@ public class HelloAndroid extends Activity implements OnClickListener
 				this.print("Erreur.");
 			else
 			{
-				this.print("Probablement correct.");
+				byte[] waitedmsg = "AUTH".getBytes();
+				byte[] rcvmsg = new byte[waitedmsg.length];
+				System.arraycopy(response, 0, rcvmsg, 0, waitedmsg.length); // BOF inside
+				if(Arrays.equals(waitedmsg, rcvmsg))
+				{
+					// Yep, so we check the signature
+					System.out.println("Recu AUTH... Verification de la signature...");
+					int signlgth = (response.length - waitedmsg.length);
+					byte[] rcvsign = new byte[signlgth];
+					System.arraycopy(response, waitedmsg.length, rcvsign, 0, signlgth);
+					start = System.currentTimeMillis();
+					boolean res = pkiKeys.verifySignature( waitedmsg, rcvsign, serverKey );
+					long duration4 = System.currentTimeMillis() - start;
+					this.print("Verification de la signature en "+duration4+"ms");
+					if(res)
+					{
+						this.print("OK!");
+					}
+					else
+					{
+						this.print("Erreur lors de la verification de la signature");
+					}
+				}
+				else
+				{
+					this.print("Mauvais message recu");
+				}
 			}
 		}
 		else
 			Toast.makeText(getApplicationContext(), "No Server Key", Toast.LENGTH_SHORT).show();
 	}
 
+	public void keyDecrypt()
+	{
+		if(serverKey != null)
+		{
+			ServerDialog sd = new ServerDialog();
+			byte[] en = {3};
+			byte[] ask = pkiKeys.encryptText(en, serverKey);
+			byte[] response = sd.getFromServer(iAdress.getText().toString(), 1023, ask);
+			if(response.length == 1 && response[0] == 2)
+			{
+				this.print("Erreur serveur.");
+			}
+			else
+			{
+				long start = System.currentTimeMillis();
+				byte[] decrypt = pkiKeys.decryptText(response, pkiKeys.getPrivateKey());
+				String res = new String(decrypt);
+				long duration = System.currentTimeMillis() - start;
+				this.print("Decryptage du message "+res+" en "+duration+"ms");
+			}
+		}
+		else
+			Toast.makeText(getApplicationContext(), "No Server Key", Toast.LENGTH_SHORT).show();
+	}
+	
+	public void keyAll()
+	{
+		long start = System.currentTimeMillis();
+		keyLoadFromFile();
+		keyGetServer();
+		keySetServer();
+		keyConnect();
+		long duration = System.currentTimeMillis() - start;
+		this.print("TOUT en "+duration+"ms");
+	}
+	
 	/**
 	 * Load private and public keys from the phone
 	 */
@@ -207,6 +271,22 @@ public class HelloAndroid extends Activity implements OnClickListener
 		pkiKeys.loadKeysFromFile();
 		long duration = System.currentTimeMillis() - start;
 		this.print("Clés chargées en "+duration+"ms.");
+	}
+	
+	/**
+	 * Print the first 20 bytes of an array of bytes. Used for debug.
+	 * @param e	the array of byte
+	 * @return the represented string
+	 */
+	public String printBytes(byte[] e)
+	{
+		String l = "";
+		int max = 20;
+		if(e.length < 20) max = e.length;
+		for(int i=0; i < max; i++) {
+			l += e[i]+"/";
+		}
+		return l;
 	}
 	
 	/* ---------------------------------------------------------------------------------- */
