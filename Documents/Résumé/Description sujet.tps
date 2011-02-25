@@ -24,11 +24,11 @@ Class=CLatexEdit
 Document=Description sujet.tex
 
 [Frame0_Row0]
-cyCur=699
+cyCur=568
 cyMin=10
 
 [Frame0_Col0]
-cxCur=1891
+cxCur=1053
 cxMin=10
 
 [Frame0_View0,0]

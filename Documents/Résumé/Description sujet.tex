@@ -1,4 +1,4 @@
-\documentclass[frenchb, a4paper]{llncs}
+\documentclass[frenchb, a4paper]{report}
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage{times}
@@ -22,22 +22,24 @@
 \begin{document}
 \title{Comparaison fonctionnelle et expérimentale d'une PKI sur mobile et de Kerberos sur mobile. Mise en oeuvre et comparaison rigoureuse des résultats expérimentaux. Automatisation du déploiement.}
 \author{Jean-Philippe Blaise, Willian Jouot}
-\institute{Master SSIC, Metz University,\\
-Ile du Saulcy, 57045 Metz, France\\
-\mailsa\\
-\mailsb\\
 }
 \maketitle
+
+\clearpage
+
+\tableofcontents
+
 
 \begin {abstract}
 \linespread{1.5cm}
 De nos jours, les téléphones mobiles sont partout, et la population de smartphone est en plein essor. Ces types d'appareils peuvent faire de plus en plus de choses, et ainsi égaler nos ordinateurs. Ainsi en leur fournissant une multitude de moyens de communication, nous devons nous poser la question de la sécurité des données, telle que nous la connaissons pour nos ordinateurs. Les smartphones, étant de plus en plus puissant, peuvent parfaitement gérer un ou plusieurs protocole d'authentification. De ce fait, nous allons développer une solution de PKI et une solution  Kerberos pour smartphones utilisants le celebre Operating System de Google, Android. Dans cet article, nous allons comparer quelques solutions déjà existantes, puis proposer notre méthode.
+
+\newline
+\newline
+\textbf{Mots-clés :} PKI, Kerberos, Android, mobile, mise en oeuvre, déploiement automatique
 \end{abstract}
 
-\begin{description}
-	\item[Mots-clés :] 
-{PKI, Kerberos, Android, mobile, mise en oeuvre, déploiement automatique}
-\end{description}
+\chapter{Etude de l'art}
 
 \section{Problématique}
 
@@ -108,6 +110,8 @@ Premier constat, aucune solution de PKI ne supporte l'échange de données de télé
 De leur coté, les solutions Kerberos, présentées plus tôt ont eux aussi ce soucis de ne pas gérer les échanges entre deux téléphones.
 
 Evidemment, chacunes des techniques PKI ou Kerberos présentent des désavantages qui sont propres à leur fonctionnement. Par exemple, lors d'un système Kerberos, les mots de passe utilisateurs sont enregistrés sur le serveur de manière non hashé, car le serveur a besoin du mot de passe en clair pour crypter la réponse à envoyer au client. De plus, Kerberos, de part son fonctionnement en serveur, peut poser problème si pour une raison ou une autre le serveur d'authentification n'est pas accessible. Dans le cas par exemple où le serveur a planté.
+
+\chapter{Réalisation}
 
 \section{Objectifs et perspectives du projet de synthèse}
 
@@ -206,7 +210,7 @@ Nous avons réalisé une série de test, notamment la génération des clés publiques
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{graphique.PNG}
+\includegraphics[width=1\textwidth,height=0.9\textwidth]{graphique.PNG}
 \caption{Génération des clés sur 50 essais}
 \end{figure}
 
@@ -216,7 +220,7 @@ Nous avons réalisé des tests sur le chiffrement d'un message "CHALLENGE", pour f
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{stat2.jpg}
+\includegraphics[width=1\textwidth,height=0.90\textwidth]{stat2.jpg}
 \caption{50 essais de signature et de chiffrement du message "CHALLENGE"}
 \end{figure}
 
@@ -224,7 +228,7 @@ Nos tests d'envoi du message au serveur se sont revelés plus excellent, d'une ex
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.80\textwidth,height=0.50\textwidth]{stat3.jpg}
+\includegraphics[width=1\textwidth,height=0.90\textwidth]{stat3.jpg}
 \caption{50 essais d'envoi de message}
 \end{figure}
 
@@ -258,7 +262,7 @@ En effet, le serveur de la PKI n'a besoin que de connaitre la clé publique du cl
 Pour Kerberos, il a les mots de passe, soit pour n utilisateurs, n mots de passe, mais en plus, il y a les tickets de services, qui sont différents pour chaque utilisateur et pour chaque service. De plus, ces tickets ont une durée de vie limitée, il faut donc pour un même service et un même utilisateur, plusieurs tickets.
 Ce n'est pas des plus simple à gérer.
 
-\section{Conclusion}
+\chapter{Conclusion}
 Pour conclure, bien que notre projet n'est pas pu être réalisé entièrement, nous pouvons tout de même voir que la PKI est très difficilement battable sur les critères de comparaison que nous avions décidé d'utiliser. Ainsi, bien que chacune des deux méthodes possèdes ses avantages et ses inconvénients, la méthode PKI reste très sûre tout en restant simple à déployer.
 \newline
 \newline
