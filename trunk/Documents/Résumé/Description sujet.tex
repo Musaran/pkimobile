@@ -12,8 +12,6 @@
 \usepackage{version}
 \DeclareGraphicsExtensions{.jpg,.mps,.pdf,.png,.gif, .ps, .eps}
 \graphicspath{{images/}}
-\urldef{\mailsa}\path|jeanphilippe.blaise@umail.univ-metz.fr|
-\urldef{\mailsb}\path|william.jouot@umail.univ-metz.fr|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 \newcommand{\noun}[1]{\textsc{#1}}
@@ -22,7 +20,7 @@
 \begin{document}
 \title{Comparaison fonctionnelle et expérimentale d'une PKI sur mobile et de Kerberos sur mobile. Mise en oeuvre et comparaison rigoureuse des résultats expérimentaux. Automatisation du déploiement.}
 \author{Jean-Philippe Blaise, Willian Jouot}
-}
+
 \maketitle
 
 \clearpage
@@ -34,8 +32,6 @@
 \linespread{1.5cm}
 De nos jours, les téléphones mobiles sont partout, et la population de smartphone est en plein essor. Ces types d'appareils peuvent faire de plus en plus de choses, et ainsi égaler nos ordinateurs. Ainsi en leur fournissant une multitude de moyens de communication, nous devons nous poser la question de la sécurité des données, telle que nous la connaissons pour nos ordinateurs. Les smartphones, étant de plus en plus puissant, peuvent parfaitement gérer un ou plusieurs protocole d'authentification. De ce fait, nous allons développer une solution de PKI et une solution  Kerberos pour smartphones utilisants le celebre Operating System de Google, Android. Dans cet article, nous allons comparer quelques solutions déjà existantes, puis proposer notre méthode.
 
-\newline
-\newline
 \textbf{Mots-clés :} PKI, Kerberos, Android, mobile, mise en oeuvre, déploiement automatique
 \end{abstract}
 
@@ -70,7 +66,7 @@ Une machine en ligne (banques, vente en ligne, etc.) crypte son message, et le s
 \caption{Modèle de paiement virtuel}
 \end{figure}
 
-Cette figure schématise le fonctionnement du paiement via téléphone mobile. 6 étapes sont nécessaires. 
+Cette figure schématise le fonctionnement du paiement via téléphone mobile. Six étapes sont nécessaires. 
 
 \subsection{PKI pour (très vieux) mobiles}
 
@@ -136,14 +132,14 @@ Malheureusement, nous n'avons pas pu réaliser cette partie du projet. Nous détai
 Notre sujet était d'exporter deux méthodes d'authentification pour machines traditionnelles sur des téléphones mobiles et de les comparer.
 
 Nous avons décidé de tester et comparer ses deux protocoles sur quelques aspects :
-\begin{itemize}
+\begin{enumerate}
 \item Implémentation
 \item Rapidité d'execution
 \item Interaction avec l'humain
 \item Sécurité du protocole
 \item Solidité du protocole
 \item Scalabilité
-\end{itemize}
+\end{enumerate}
 
 \section{Problèmes rencontrés}
 
@@ -164,7 +160,7 @@ Enfin, nous avons remarqué que, contrairement à PKI, il y a très peu de document
 \section{Implémentation}
 
 \subsection{PKI}
-Nous avons developper une application de PKI pour android, ainsi qu'un serveur Java sur lequel notre application se connecte.
+Nous avons developper une application de PKI pour Android, ainsi qu'un serveur Java sur lequel notre application se connecte.
 Notre application android est complète, c'est à dire qu'elle est capable de générer ses propres clés, les sauvegarder ou bien charger des clés deja stockées. Elle peut également envoyer sa clé publique à notre serveur.
 Elle peut récupérer la clé publique du serveur depuis un autre serveur tier. Et bien sur, elle peut signer et crypter un message. De son côté, le serveur écoute sur un port spécifique, et attend des connexions. Il peut ensuite réceptionner une clé publique, déchiffrer et vérifier la signature du message envoyé via notre application et le message en lui même. Le serveur peut également envoyer un message crypté avec la clé publique du téléphone, message que le téléphone déchiffera correctement pour retrouver le message d'origine.
 
@@ -208,6 +204,8 @@ Va-t-on avoir les mêmes résultats pour notre cas, sur mobile ?
 Côté PKI, nous avons de très bons résultats. Nos tests ont été réalisés sur l'émulateur android fourni avec l'API et sur une tablette tactile fonctionnant sous android.
 Nous avons réalisé une série de test, notamment la génération des clés publiques et privée.
 
+L'appareil utilisé pour les tests finaux est la tablette Archos 7IT, avec 1GHz de fréquence processeur, et 256 mo de RAM. Lors de nos tests, quelques applications fonctionnaient en arrière plan, mais qui n'ont pas interféré avec le fonctionnement de notre application.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth,height=0.9\textwidth]{graphique.PNG}
@@ -232,31 +230,38 @@ Nos tests d'envoi du message au serveur se sont revelés plus excellent, d'une ex
 \caption{50 essais d'envoi de message}
 \end{figure}
 
+Pour les PKI, les délais sont tellement négligeables, que tout est transparent pour l'utilisateur, il ne verra rien.
+
 
 Comme mentionné plus haut, nous n'avons pas pu réaliser de client Kerberos. Ainsi la comparaison va être un peu plus difficile. Cependant sur certain critère, nous pouvons tout de même répondre.
 
 Récapitulons selon nos critères définis plus haut.
-
+\subsubsection{Implémentation}
 L'implémentation a été bien plus aisée pour la PKI. On peut se demander pourquoi. La raison est simple, c'est un système d'authentification très utilisé. Ainsi, nous avons pu trouver énormément de tutoriaux, de guides, et surtout les bonnes méthodes dans l'API pour développer un client PKI. Pour Kerberos, de nombreux guides sont disponibles sur Internet, mais très peu sont assez détaillé. Et comme Kerberos n'est pas vraiment utilisé pour le grand public, les méthodes utiles à son développement ne sont pas incluses dans l'API de Google, et surtout, cette API n'accepte pas l'API de Kerberos.
 \newline
 \newline
+\subsubsection{Rapidité d'exécution}
 La rapidité d'exécution. D'après nos tests et nos graphiques précédents, on s'aperçoit que la PKI est vraiment très rapide. La raison étant que la PKI n'a besoin que d'un serveur, il n'y a donc pas beaucoup de connexion à réaliser contraiement à Kerberos, qui requiert deux serveurs, et implique de ce fait, bien plus d'échanges.
 \newline
 \newline
+\subsubsection{Intération avec l'homme}
 L'intéraction avec l'homme est tout aussi compliquée pour les deux protocoles. En effet, la PKI fonctionne avec un système de clés publiques et privées. L'utilisateur doit donc gérer, et protéger sa clé privée. Pour Kerberos, le système utilise des tickets, l'utilisateur n'utilise qu'un mot de passe, ou une clé symétrique pour communiquer avec le premier serveur, et réceptionner son ticket de service.
 Dans tous les cas, l'utilisateur doit garder quelque chose de secret, ce qui n'est pas forcement évident. Mais il est tout de même plus facile pour un utilisateur commum de mémoriser un mot de passe, plutôt que de gérer des clés qu'il doit transporter avec lui, ce qui peut être source de perte ou de vol, contrairement au mot de passe, qui lui, est censé rester dans la tête.
 \newline
 \newline
+\subsubsection{Sécurité du protocole}
 La sécurité du protocole repose d'un côté sur la clé privée, qui reste privée, et d'un autre côté sur un mot de passe ou une clé sysmétrique qui doit aussi rester secret.
 Pour la PKI le système est très sûr. Le seul moyen de "craquer" la sécurité serait la force brute, ou le vol de la clé privée. Pour Kerberos, l'attaquant peut avoir deux possibilités, soit attaquer le serveur, et lui voler la clé symétrique ou le mot de passe de l'utilisateur, ou voler directement l'utilisateur.
 \newline
 \newline
-Notons que le plus simple pour voler la clé privée de la PKI ou le mot de passe de Kerberos et tout simplement de voler le téléphone. Il est donc recommandé de protéger ces données en les cryptant dans le téléphone.
+Notons que le plus simple pour voler la clé privée de la PKI ou le mot de passe de Kerberos et tout simplement de voler le téléphone. Il est donc recommandé de protéger ces données avec une passphrase. Nous n'avons pas mis en place cette sécurité.
 \newline
 \newline
+\subsubsection{Solidité du protocole}
 La solidité des protocoles repose sur les points vus précédement. Il faut protéger les données privées.
 \newline
 \newline
+\subsubsection{Scalabilité}
 Pour la scalabilité, on peut se douter que Kerberos est une fois de plus, plus compliqué que la PKI.
 En effet, le serveur de la PKI n'a besoin que de connaitre la clé publique du client, et inversement. Ainsi pour n utilisateurs, nous aurions n+1 clés publiques et n+1 clés privées.
 Pour Kerberos, il a les mots de passe, soit pour n utilisateurs, n mots de passe, mais en plus, il y a les tickets de services, qui sont différents pour chaque utilisateur et pour chaque service. De plus, ces tickets ont une durée de vie limitée, il faut donc pour un même service et un même utilisateur, plusieurs tickets.
