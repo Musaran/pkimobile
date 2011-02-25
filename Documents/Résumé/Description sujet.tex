@@ -301,6 +301,10 @@ Pour la scalabilité, on peut se douter que Kerberos est une fois de plus, plus c
 En effet, le serveur de la PKI n'a besoin que de connaitre la clé publique du client, et inversement. Ainsi pour n utilisateurs, nous aurions n+1 clés publiques et n+1 clés privées.
 Pour Kerberos, il a les mots de passe, soit pour n utilisateurs, n mots de passe, mais en plus, il y a les tickets de services, qui sont différents pour chaque utilisateur et pour chaque service. De plus, ces tickets ont une durée de vie limitée, il faut donc pour un même service et un même utilisateur, plusieurs tickets.
 Ce n'est pas des plus simple à gérer.
+\newline
+\newline
+Ce qu'il faut savoir, c'est qu'il est plutôt difficile de trouver des critères de comparaison purement mesurables de manières mathématiques et ainsi de pouvoir les comparer.
+
 
 \chapter{Conclusion}
 Pour conclure, bien que notre projet n'est pas pu être réalisé entièrement, nous pouvons tout de même voir que la PKI est très difficilement battable sur les critères de comparaison que nous avions décidé d'utiliser. Ainsi, bien que chacune des deux méthodes possèdes ses avantages et ses inconvénients, la méthode PKI reste très sûre tout en restant simple à déployer.
