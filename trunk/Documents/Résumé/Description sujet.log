@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  25 FEB 2011 20:54
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  25 FEB 2011 21:16
 entering extended mode
 **D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description*sujet.tex
 ("D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description sujet.tex"
@@ -374,20 +374,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
-[16] [17]
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 300--307
+
+ []
+
+[17]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--316
 
  []
 
@@ -411,7 +416,7 @@ Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
 eX 2.8/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on "Description sujet.pdf" (22 pages, 957733 bytes).
+Output written on "Description sujet.pdf" (22 pages, 957882 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
