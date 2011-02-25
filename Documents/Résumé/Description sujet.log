@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.2.25)  25 FEB 2011 10:23
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2010.10.4)  25 FEB 2011 20:54
 entering extended mode
-**C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description*sujet.tex
-("C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description sujet.tex"
+**D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description*sujet.tex
+("D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/Description sujet.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -117,12 +117,12 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box27
 )
-(C:\Users\jeanblai\workspace\trunk\Documents\Résumé\prettyref.sty
+(D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\prettyref.sty
 Package: prettyref 1998/07/09 v3.0
 )
 \c@algorithm=\count93
 
-("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.aux")
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -169,7 +169,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 29.
 
-("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.toc"
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.toc"
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -264,138 +264,156 @@ File: images/2.jpg Graphic file (type jpg)
  <use images/2.jpg>
 <images/3.jpg, id=18, 560.0925pt x 388.45125pt>
 File: images/3.jpg Graphic file (type jpg)
- <use images/3.jpg> [2 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
-es/1.jpg> <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/2.jpg>]
+ <use images/3.jpg> [2 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/
+1.jpg> <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/2.jpg>]
 <images/4.jpg, id=22, 684.5575pt x 272.01625pt>
 File: images/4.jpg Graphic file (type jpg)
- <use images/4.jpg> [3 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
-es/3.jpg>]
+ <use images/4.jpg> [3 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/
+3.jpg>]
 <images/5.jpg, id=26, 698.61pt x 532.99126pt>
 File: images/5.jpg Graphic file (type jpg)
- <use images/5.jpg> [4 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
-es/4.jpg> <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/5.jpg>] [5
-]
+ <use images/5.jpg> [4 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/
+4.jpg> <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/5.jpg>] [5]
 Chapitre 2.
 <images/6.jpg, id=34, 330.23375pt x 494.84875pt>
 File: images/6.jpg Graphic file (type jpg)
  <use images/6.jpg> [6
 
- <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/6.jpg>] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 171--179
+ <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/6.jpg>] [7] [8]
+<images/fb-20110225-203942.png, id=44, 803.0pt x 481.8pt>
+File: images/fb-20110225-203942.png Graphic file (type png)
+
+<use images/fb-20110225-203942.png> [9]
+<images/sendcle.JPG, id=49, 274.02374pt x 117.43875pt>
+File: images/sendcle.JPG Graphic file (type jpg)
+
+<use images/sendcle.JPG>
+<images/fb-20110225-203959.png, id=50, 803.0pt x 481.8pt>
+File: images/fb-20110225-203959.png Graphic file (type png)
+
+<use images/fb-20110225-203959.png> [10 <D:/Taff/M2/pkimobile/svn/trunk/Documen
+ts/Résumé/images/fb-20110225-203942.png> <D:/Taff/M2/pkimobile/svn/trunk/Docume
+nts/Résumé/images/sendcle.JPG>]
+<images/verif.JPG, id=56, 365.11406pt x 91.09032pt>
+File: images/verif.JPG Graphic file (type jpg)
+ <use images/verif.JPG>
+Underfull \hbox (badness 10000) in paragraph at lines 205--213
 
  []
 
-[9] <images/tablecomparaison.jpg, id=47, 619.56468pt x 299.61937pt>
+[11 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/fb-20110225-203959.
+png> <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/verif.JPG>]
+<images/tablecomparaison.jpg, id=61, 619.56468pt x 299.61937pt>
 File: images/tablecomparaison.jpg Graphic file (type jpg)
 
 <use images/tablecomparaison.jpg>
-<images/graphique.PNG, id=48, 787.44188pt x 493.845pt>
+<images/graphique.PNG, id=62, 787.44188pt x 493.845pt>
 File: images/graphique.PNG Graphic file (type png)
 
-<use images/graphique.PNG> [10 <C:/Users/jeanblai/workspace/trunk/Documents/Rés
-umé/images/tablecomparaison.jpg>]
-<images/stat2.jpg, id=54, 609.02531pt x 371.13657pt>
+<use images/graphique.PNG> [12 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé
+/images/tablecomparaison.jpg>]
+<images/stat2.jpg, id=66, 609.02531pt x 371.13657pt>
 File: images/stat2.jpg Graphic file (type jpg)
  <use images/stat2.jpg>
-[11 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/graphique.PNG>]
-<images/stat3.jpg, id=59, 563.10374pt x 373.395pt>
+[13 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/graphique.PNG>]
+<images/stat3.jpg, id=71, 563.10374pt x 373.395pt>
 File: images/stat3.jpg Graphic file (type jpg)
  <use images/stat3.jpg>
-[12 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+[14 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
 
  []
 
-[13 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat3.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 245--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--248
+[15 <D:/Taff/M2/pkimobile/svn/trunk/Documents/Résumé/images/stat3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 279--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 279--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 283--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--261
+Underfull \hbox (badness 10000) in paragraph at lines 283--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--261
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--261
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--265
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--265
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
  []
 
-[14] [15]
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+
+ []
+
+[16] [17]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 306--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 306--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 306--312
 
  []
 
-("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.bbl"
-[16
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.bbl"
+[18
 
-]) [17
+]) [19
 
 ]
-("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.aux") ) 
+("D:\Taff\M2\pkimobile\svn\trunk\Documents\Résumé\Description sujet.aux") ) 
 Here is how much of TeX's memory you used:
- 2157 strings out of 495285
- 28030 string characters out of 3180334
+ 2179 strings out of 495285
+ 28507 string characters out of 3180385
  85082 words of memory out of 3000000
- 5324 multiletter control sequences out of 15000+200000
+ 5340 multiletter control sequences out of 15000+200000
  42316 words of font info for 47 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 25i,6n,24p,1668b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/M
-iKTeX 2.8/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/t
-ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on "Description sujet.pdf" (20 pages, 870433 bytes).
+ 25i,6n,24p,1665b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/
+Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
+eX 2.8/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type
+1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on "Description sujet.pdf" (22 pages, 957733 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

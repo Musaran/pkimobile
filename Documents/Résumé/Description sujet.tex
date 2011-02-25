@@ -20,7 +20,7 @@
 
 \begin{document}
 \title{Comparaison fonctionnelle et expérimentale d'une PKI sur mobile et de Kerberos sur mobile. Mise en oeuvre et comparaison rigoureuse des résultats expérimentaux. Automatisation du déploiement.}
-\author{Jean-Philippe Blaise, Willian Jouot}
+\author{Jean-Philippe Blaise, William Jouot}
 
 \maketitle
 
@@ -36,7 +36,7 @@ De nos jours, les téléphones mobiles sont partout, et la population de smartphon
 \textbf{Mots-clés :} PKI, Kerberos, Android, mobile, mise en oeuvre, déploiement automatique
 \end{abstract}
 
-\chapter{Etude de l'art}
+\chapter{État de l'art}
 
 \section{Problématique}
 
@@ -161,6 +161,40 @@ Enfin, l'application peut aussi envoyer un simple paquet 0x03, toujours crypté a
 
 Nous avons ainsi une application capable de crypter, décrypter, signer, et vérifier la signature. Et échanger des messages avec un serveur capable de faire de même. Le fait que le téléphone envoi un message signé et chiffré permet d'être sûr que seul le véritable serveur sera capable de lire le message, et le serveur lui aura la certitude, grâce à la signature, que c'est bien le véritable client qui a envoyé le message.
 
+
+Du côté client lors de la génération des clés, de la récupération de la clé publique du serveur, et de l'envoie de la clé publique de l'application nous avons :
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth,height=0.6\textwidth]{fb-20110225-203942.png}
+\caption{Application Android}
+\end{figure}
+
+Et du côté serveur, voila ce qui se passe : 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.3\textwidth]{sendcle.JPG}
+\caption{Serveur}
+\end{figure}
+
+
+Pour la signature et le chiffrement d'un message voila les images : 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth,height=0.6\textwidth]{fb-20110225-203959.png}
+\caption{Application Android}
+\end{figure}
+
+Et côté serveur : 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.2\textwidth]{verif.JPG}
+\caption{Serveur}
+\end{figure}
+
 \subsection{Kerberos}
 Pour notre partie Kerberos, comme mentionné plus haut, l'implémentation n'a pas été bien loin, à cause de méthodes nécessaires à l'utilisation de Kerberos qui n'étaient pas utilisables avec le SDK d'Android.
 
@@ -245,7 +279,7 @@ L'implémentation a été bien plus aisée pour la PKI. On peut se demander pourquoi
 La rapidité d'exécution. D'après nos tests et nos graphiques précédents, on s'aperçoit que la PKI est vraiment très rapide. La raison étant que la PKI n'a besoin que d'un serveur, il n'y a donc pas beaucoup de connexion à réaliser contraiement à Kerberos, qui requiert deux serveurs, et implique de ce fait, bien plus d'échanges.
 \newline
 \newline
-\subsubsection{Intération avec l'homme}
+\subsubsection{Interaction avec l'homme}
 L'intéraction avec l'homme est tout aussi compliquée pour les deux protocoles. En effet, la PKI fonctionne avec un système de clés publiques et privées. L'utilisateur doit donc gérer, et protéger sa clé privée. Pour Kerberos, le système utilise des tickets, l'utilisateur n'utilise qu'un mot de passe, ou une clé symétrique pour communiquer avec le premier serveur, et réceptionner son ticket de service.
 Dans tous les cas, l'utilisateur doit garder quelque chose de secret, ce qui n'est pas forcement évident. Mais il est tout de même plus facile pour un utilisateur commum de mémoriser un mot de passe, plutôt que de gérer des clés qu'il doit transporter avec lui, ce qui peut être source de perte ou de vol, contrairement au mot de passe, qui lui, est censé rester dans la tête.
 \newline
