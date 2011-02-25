@@ -1,5 +1,5 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Etude de l'art}{1}
+\contentsline {chapter}{\numberline {1}\'Etat de l'art}{1}
 \contentsline {section}{\numberline {1.1}Probl\'ematique}{1}
 \contentsline {section}{\numberline {1.2}Travaux existants dans la litt\'erature scientifique}{1}
 \contentsline {subsection}{\numberline {1.2.1}PKI pour sites marchands}{1}
@@ -15,15 +15,15 @@
 \contentsline {subsection}{\numberline {2.2.2}Kerberos}{7}
 \contentsline {section}{\numberline {2.3}Impl\'ementation}{8}
 \contentsline {subsection}{\numberline {2.3.1}PKI}{8}
-\contentsline {subsection}{\numberline {2.3.2}Kerberos}{9}
-\contentsline {section}{\numberline {2.4}Comparaison des deux syst\`emes d'authentification}{9}
-\contentsline {subsection}{\numberline {2.4.1}Pour les PC}{9}
-\contentsline {subsection}{\numberline {2.4.2}Pour notre probl\`eme}{10}
-\contentsline {section}{\numberline {2.5}Crit\`eres de comparaison}{13}
-\contentsline {subsubsection}{Impl\'ementation}{14}
-\contentsline {subsubsection}{Rapidit\'e d'ex\'ecution}{14}
-\contentsline {subsubsection}{Int\'eration avec l'homme}{14}
-\contentsline {subsubsection}{S\'ecurit\'e du protocole}{14}
-\contentsline {subsubsection}{Solidit\'e du protocole}{15}
-\contentsline {subsubsection}{Scalabilit\'e}{15}
-\contentsline {chapter}{\numberline {3}Conclusion}{16}
+\contentsline {subsection}{\numberline {2.3.2}Kerberos}{11}
+\contentsline {section}{\numberline {2.4}Comparaison des deux syst\`emes d'authentification}{11}
+\contentsline {subsection}{\numberline {2.4.1}Pour les PC}{11}
+\contentsline {subsection}{\numberline {2.4.2}Pour notre probl\`eme}{12}
+\contentsline {section}{\numberline {2.5}Crit\`eres de comparaison}{15}
+\contentsline {subsubsection}{Impl\'ementation}{16}
+\contentsline {subsubsection}{Rapidit\'e d'ex\'ecution}{16}
+\contentsline {subsubsection}{Interaction avec l'homme}{16}
+\contentsline {subsubsection}{S\'ecurit\'e du protocole}{16}
+\contentsline {subsubsection}{Solidit\'e du protocole}{17}
+\contentsline {subsubsection}{Scalabilit\'e}{17}
+\contentsline {chapter}{\numberline {3}Conclusion}{18}
