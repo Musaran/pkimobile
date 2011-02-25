@@ -1,222 +1,128 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.2.25)  25 FEB 2011 01:15
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.2.25)  25 FEB 2011 09:51
 entering extended mode
-**C:/Users/William/Desktop/pkimobile/Documents/Résumé/Description*sujet.tex
-("C:/Users/William/Desktop/pkimobile/Documents/Résumé/Description sujet.tex"
+**C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description*sujet.tex
+("C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description sujet.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
-(C:\Users\William\Desktop\pkimobile\Documents\Résumé\llncs.cls
-Document Class: llncs 2004/08/17 v2.14 
- LaTeX document class for Lecture Notes in Computer Science
-(E:\MiKTeX\tex\latex\base\article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(E:\MiKTeX\tex\latex\base\size10.clo
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (E:\MiKTeX\tex\latex\tools\multicol.sty
-Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count87
-\mult@box=\box26
-\multicol@leftmargin=\dimen103
-\c@unbalance=\count88
-\c@collectmore=\count89
-\doublecol@number=\count90
-\multicoltolerance=\count91
-\multicolpretolerance=\count92
-\full@width=\dimen104
-\page@free=\dimen105
-\premulticols=\dimen106
-\postmulticols=\dimen107
-\multicolsep=\skip43
-\multicolbaselineskip=\skip44
-\partial@page=\box27
-\last@line=\box28
-\mult@rightbox=\box29
-\mult@grightbox=\box30
-\mult@gfirstbox=\box31
-\mult@firstbox=\box32
-\@tempa=\box33
-\@tempa=\box34
-\@tempa=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\c@columnbadness=\count93
-\c@finalcolumnbadness=\count94
-\last@try=\dimen108
-\multicolovershoot=\dimen109
-\multicolundershoot=\dimen110
-\mult@nat@firstbox=\box50
-\colbreak@box=\box51
 )
-\c@chapter=\count95
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 360.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 361.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 365.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 368.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 369.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 370.
-\tocchpnum=\dimen111
-\tocsecnum=\dimen112
-\tocsectotal=\dimen113
-\tocsubsecnum=\dimen114
-\tocsubsectotal=\dimen115
-\tocsubsubsecnum=\dimen116
-\tocsubsubsectotal=\dimen117
-\tocparanum=\dimen118
-\tocparatotal=\dimen119
-\tocsubparanum=\dimen120
-\@tempcntc=\count96
-\fnindent=\dimen121
-\c@@inst=\count97
-\c@@auth=\count98
-\c@auco=\count99
-\instindent=\dimen122
-\authrun=\box52
-\authorrunning=\toks14
-\tocauthor=\toks15
-\titrun=\box53
-\titlerunning=\toks16
-\toctitle=\toks17
-\c@theorem=\count100
-\c@case=\count101
-\c@conjecture=\count102
-\c@corollary=\count103
-\c@definition=\count104
-\c@example=\count105
-\c@exercise=\count106
-\c@lemma=\count107
-\c@note=\count108
-\c@problem=\count109
-\c@property=\count110
-\c@proposition=\count111
-\c@question=\count112
-\c@solution=\count113
-\c@remark=\count114
-\headlineindent=\dimen123
-) (E:\MiKTeX\tex\latex\base\fontenc.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
- (E:\MiKTeX\tex\latex\base\t1enc.def
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(E:\MiKTeX\tex\latex\base\inputenc.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks18
-\inpenc@posthook=\toks19
- (E:\MiKTeX\tex\latex\base\latin1.def
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-(E:\MiKTeX\tex\latex\psnfss\times.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (E:\MiKTeX\tex\latex\ltxmisc\url.sty
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(E:\MiKTeX\tex\latex\ltxmisc\version.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\ltxmisc\version.sty"
 Package: version 2009/09/15  v 2.0
 Package version Info: Excluding comment environments declared on input line 115
 .
 )
-(E:\MiKTeX\tex\generic\babel\babel.sty
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.sty"
 Package: babel 2008/07/06 v3.8l The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(E:\MiKTeX\tex\latex\00miktex\bblopts.cfg
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(E:\MiKTeX\tex\generic\babel\frenchb.ldf
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\frenchb.ldf"
 Language: frenchb 2009/03/16 v2.3d French support from the babel system
- (E:\MiKTeX\tex\generic\babel\babel.def
+
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.def"
 File: babel.def 2008/07/06 v3.8l Babel common definitions
-\babel@savecnt=\count115
-\U@D=\dimen124
+\babel@savecnt=\count88
+\U@D=\dimen103
 )
 Package babel Info: Making : an active character on input line 120.
 Package babel Info: Making ; an active character on input line 121.
 Package babel Info: Making ! an active character on input line 122.
 Package babel Info: Making ? an active character on input line 123.
-\FB@Mht=\dimen125
-\std@mcc=\count116
-\dec@mcc=\count117
-\parindentFFN=\dimen126
+\FB@Mht=\dimen104
+\std@mcc=\count89
+\dec@mcc=\count90
+\parindentFFN=\dimen105
 
 *************************************
 * Local config file frenchb.cfg used
 *
-(E:\MiKTeX\tex\generic\babel\frenchb.cfg))
-(E:\MiKTeX\tex\generic\babel\frenchb.ldf
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\frenchb.cfg"))
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\frenchb.ldf"
 Language: frenchb 2009/03/16 v2.3d French support from the babel system
 ))
-(E:\MiKTeX\tex\latex\carlisle\scalefnt.sty)
-(E:\MiKTeX\tex\latex\graphics\keyval.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks16
 )
-(E:\MiKTeX\tex\latex\graphics\graphicx.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\MiKTeX\tex\latex\graphics\graphics.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(E:\MiKTeX\tex\latex\graphics\trig.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(E:\MiKTeX\tex\latex\00miktex\graphics.cfg
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(E:\MiKTeX\tex\latex\pdftex-def\pdftex.def
+("C:\Program Files\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
-\Gread@gobject=\count118
+\Gread@gobject=\count91
 ))
-\Gin@req@height=\dimen127
-\Gin@req@width=\dimen128
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
 )
-(E:\MiKTeX\tex\latex\float\float.sty
+("C:\Program Files\MiKTeX 2.8\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count119
-\float@exts=\toks21
-\float@box=\box54
-\@float@everytoks=\toks22
-\@floatcapt=\box55
+\c@float@type=\count92
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
 )
-(C:\Users\William\Desktop\pkimobile\Documents\Résumé\prettyref.sty
+(C:\Users\jeanblai\workspace\trunk\Documents\Résumé\prettyref.sty
 Package: prettyref 1998/07/09 v3.0
 )
-\c@algorithm=\count120
+\c@algorithm=\count93
 
-("C:\Users\William\Desktop\pkimobile\Documents\Résumé\Description sujet.aux")
+("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
@@ -231,179 +137,273 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 22.
 
-(E:\MiKTeX\tex\latex\psnfss\t1ptm.fd
+("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 LaTeX Info: Redefining \degres on input line 22.
-
-
-Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
-(frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 22.
-
 LaTeX Info: Redefining \dots on input line 22.
 LaTeX Info: Redefining \up on input line 22.
-(E:\MiKTeX\tex\context\base\supp-pdf.tex
+
+("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen129
-\scratchbox=\box56
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen130
-\MPnumerator=\count125
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count94
+\scratchdimen=\dimen108
+\scratchbox=\box28
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen109
+\MPnumerator=\count98
+\everyMPtoPDFconversion=\toks20
 )
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+! Too many }'s.
+l.25 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 26.
+[1
+
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 30.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 30.
- (E:\MiKTeX\tex\latex\psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 30.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
+
+("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.toc"
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 38.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write3
+
+[1
+
+
+]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \newline
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \newline
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \setbox 
+l.39 \textbf{Mots-clés :}
+                          PKI, Kerberos, Android, mobile, mise en oeuvre, dé...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \setbox 
+l.39 \textbf{Mots-clés :}
+                          PKI, Kerberos, Android, mobile, mise en oeuvre, dé...
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \setbox 
+l.40 \end{abstract}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \setbox 
+l.40 \end{abstract}
+                   
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \setbox 
+l.40 \end{abstract}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \setbox 
+l.40 \end{abstract}
+                   
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[1]
+Chapitre 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
- [1
-
-{C:/Users/William/AppData/Local/MiKTeX/2.8/pdftex/config/pdftex.map}]
-<images/1.jpg, id=8, 709.65125pt x 480.79625pt>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
+<images/1.jpg, id=13, 709.65125pt x 480.79625pt>
 File: images/1.jpg Graphic file (type jpg)
- <use images/1.jpg>
-LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <9> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 59.
+ <use images/1.jpg> [1
 
-<images/2.jpg, id=9, 1028.84375pt x 233.87375pt>
+]
+<images/2.jpg, id=17, 1028.84375pt x 233.87375pt>
 File: images/2.jpg Graphic file (type jpg)
  <use images/2.jpg>
-Underfull \vbox (badness 2189) has occurred while \output is active []
-
- [2 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/1.jpg>]
-<images/3.jpg, id=13, 560.0925pt x 388.45125pt>
+<images/3.jpg, id=18, 560.0925pt x 388.45125pt>
 File: images/3.jpg Graphic file (type jpg)
- <use images/3.jpg> [3 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/ima
-ges/2.jpg> <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/3.jpg>]
-<images/4.jpg, id=17, 684.5575pt x 272.01625pt>
+ <use images/3.jpg> [2 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
+es/1.jpg> <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/2.jpg>]
+<images/4.jpg, id=22, 684.5575pt x 272.01625pt>
 File: images/4.jpg Graphic file (type jpg)
- <use images/4.jpg>
-<images/5.jpg, id=18, 698.61pt x 532.99126pt>
+ <use images/4.jpg> [3 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
+es/3.jpg>]
+<images/5.jpg, id=26, 698.61pt x 532.99126pt>
 File: images/5.jpg Graphic file (type jpg)
- <use images/5.jpg>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/4.jpg>] [5 <C:/
-Users/William/Desktop/pkimobile/Documents/Résumé/images/5.jpg>]
-<images/6.jpg, id=25, 330.23375pt x 494.84875pt>
+ <use images/5.jpg> [4 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/imag
+es/4.jpg> <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/5.jpg>] [5
+]
+Chapitre 2.
+<images/6.jpg, id=34, 330.23375pt x 494.84875pt>
 File: images/6.jpg Graphic file (type jpg)
- <use images/6.jpg> [6 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/ima
-ges/6.jpg>] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 184--192
+ <use images/6.jpg> [6
+
+ <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/6.jpg>] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 188--196
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-<images/tablecomparaison.jpg, id=39, 619.56468pt x 299.61937pt>
+[9] <images/tablecomparaison.jpg, id=47, 619.56468pt x 299.61937pt>
 File: images/tablecomparaison.jpg Graphic file (type jpg)
 
 <use images/tablecomparaison.jpg>
-<images/graphique.PNG, id=40, 787.44188pt x 493.845pt>
+<images/graphique.PNG, id=48, 787.44188pt x 493.845pt>
 File: images/graphique.PNG Graphic file (type png)
 
-<use images/graphique.PNG>
-Underfull \vbox (badness 2635) has occurred while \output is active []
-
- [10 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/tablecomparais
-on.jpg>]
-<images/stat2.jpg, id=45, 609.02531pt x 371.13657pt>
+<use images/graphique.PNG> [10 <C:/Users/jeanblai/workspace/trunk/Documents/Rés
+umé/images/tablecomparaison.jpg>]
+<images/stat2.jpg, id=54, 609.02531pt x 371.13657pt>
 File: images/stat2.jpg Graphic file (type jpg)
  <use images/stat2.jpg>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/graphique.PNG>
-]
-<images/stat3.jpg, id=50, 563.10374pt x 373.395pt>
+[11 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/graphique.PNG>]
+<images/stat3.jpg, id=59, 563.10374pt x 373.395pt>
 File: images/stat3.jpg Graphic file (type jpg)
  <use images/stat3.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+[12 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--260
+Underfull \hbox (badness 10000) in paragraph at lines 240--264
 
  []
 
-[12 <C:/Users/William/Desktop/pkimobile/Documents/Résumé/images/stat2.jpg> <C:/
-Users/William/Desktop/pkimobile/Documents/Résumé/images/stat3.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[13 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat3.jpg>]
+[14]
+Chapitre 3.
 
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 262--268
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--268
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--268
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
 
  []
 
-("C:\Users\William\Desktop\pkimobile\Documents\Résumé\Description sujet.bbl")
-[14] ("C:\Users\William\Desktop\pkimobile\Documents\Résumé\Description sujet.au
-x") ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--272
+
+ []
+
+("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.bbl"
+[15
+
+]) [16
+
+]
+("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.aux") ) 
 Here is how much of TeX's memory you used:
- 2516 strings out of 495285
- 30926 string characters out of 3181936
- 96409 words of memory out of 3000000
- 5679 multiletter control sequences out of 15000+200000
- 34927 words of font info for 41 fonts, out of 3000000 for 9000
+ 2161 strings out of 495285
+ 28056 string characters out of 3180334
+ 85250 words of memory out of 3000000
+ 5328 multiletter control sequences out of 15000+200000
+ 42316 words of font info for 47 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,5n,24p,1669b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<E:/MiKTeX/fonts/type1/urw/cour
-ier/ucrr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><E:/MiKTeX/fonts/typ
-e1/urw/times/utmr8a.pfb><E:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Description sujet.pdf" (14 pages, 877671 bytes).
+ 25i,6n,24p,1668b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+{
+C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/M
+iKTeX 2.8/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/t
+ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on "Description sujet.pdf" (19 pages, 869457 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

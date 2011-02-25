@@ -1,0 +1,23 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Etude de l'art}{1}
+\contentsline {section}{\numberline {1.1}Probl\'ematique}{1}
+\contentsline {section}{\numberline {1.2}Travaux existants dans la litt\'erature scientifique}{1}
+\contentsline {subsection}{\numberline {1.2.1}PKI pour sites marchands}{1}
+\contentsline {subsection}{\numberline {1.2.2}Syst\`eme de paiement s\'ecuris\'e}{1}
+\contentsline {subsection}{\numberline {1.2.3}PKI pour (tr\`es vieux) mobiles}{2}
+\contentsline {subsection}{\numberline {1.2.4}Kerberos et la non r\'epudiation}{3}
+\contentsline {subsection}{\numberline {1.2.5}Kerberos et ses tickets transportables}{3}
+\contentsline {section}{\numberline {1.3}Premi\`eres critiques des travaux existants}{4}
+\contentsline {chapter}{\numberline {2}R\'ealisation}{6}
+\contentsline {section}{\numberline {2.1}Objectifs et perspectives du projet de synth\`ese}{6}
+\contentsline {section}{\numberline {2.2}Crit\`eres de comparaison}{7}
+\contentsline {section}{\numberline {2.3}Probl\`emes rencontr\'es}{7}
+\contentsline {subsection}{\numberline {2.3.1}PKI}{7}
+\contentsline {subsection}{\numberline {2.3.2}Kerberos}{7}
+\contentsline {section}{\numberline {2.4}Impl\'ementation}{8}
+\contentsline {subsection}{\numberline {2.4.1}PKI}{8}
+\contentsline {subsection}{\numberline {2.4.2}Kerberos}{9}
+\contentsline {section}{\numberline {2.5}Comparaison des deux syst\`emes d'authentification}{10}
+\contentsline {subsection}{\numberline {2.5.1}Pour les PC}{10}
+\contentsline {subsection}{\numberline {2.5.2}Pour notre probl\`eme}{10}
+\contentsline {chapter}{\numberline {3}Conclusion}{15}
