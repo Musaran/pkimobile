@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.2.25)  25 FEB 2011 10:14
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.2.25)  25 FEB 2011 10:23
 entering extended mode
 **C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description*sujet.tex
 ("C:/Users/jeanblai/workspace/trunk/Documents/Résumé/Description sujet.tex"
@@ -123,26 +123,26 @@ Package: prettyref 1998/07/09 v3.0
 \c@algorithm=\count93
 
 ("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 21.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Info: Redefining \degres on input line 20.
-LaTeX Info: Redefining \dots on input line 20.
-LaTeX Info: Redefining \up on input line 20.
+LaTeX Info: Redefining \degres on input line 21.
+LaTeX Info: Redefining \dots on input line 21.
+LaTeX Info: Redefining \up on input line 21.
 
 ("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -158,16 +158,16 @@ LaTeX Info: Redefining \up on input line 20.
 \everyMPtoPDFconversion=\toks20
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 24.
+(Font)              <6> on input line 25.
  [1
 
 {C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 29.
 
 ("C:\Users\jeanblai\workspace\trunk\Documents\Résumé\Description sujet.toc"
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
@@ -186,7 +186,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ! Missing number, treated as zero.
 <to be read again> 
                    \setbox 
-l.35 \textbf{Mots-clés :}
+l.36 \textbf{Mots-clés :}
                           PKI, Kerberos, Android, mobile, mise en oeuvre, dé...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -195,7 +195,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \setbox 
-l.35 \textbf{Mots-clés :}
+l.36 \textbf{Mots-clés :}
                           PKI, Kerberos, Android, mobile, mise en oeuvre, dé...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -207,7 +207,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \setbox 
-l.36 \end{abstract}
+l.37 \end{abstract}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -216,7 +216,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \setbox 
-l.36 \end{abstract}
+l.37 \end{abstract}
                    
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -228,7 +228,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \setbox 
-l.36 \end{abstract}
+l.37 \end{abstract}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -237,7 +237,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \setbox 
-l.36 \end{abstract}
+l.37 \end{abstract}
                    
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -249,11 +249,11 @@ two letters. (See Chapter 27 of The TeXbook.)
 [1]
 Chapitre 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 38.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 39.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 46.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 47.
 <images/1.jpg, id=13, 709.65125pt x 480.79625pt>
 File: images/1.jpg Graphic file (type jpg)
  <use images/1.jpg> [1
@@ -281,7 +281,7 @@ File: images/6.jpg Graphic file (type jpg)
  <use images/6.jpg> [6
 
  <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/6.jpg>] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 184--192
+Underfull \hbox (badness 10000) in paragraph at lines 171--179
 
  []
 
@@ -302,74 +302,74 @@ File: images/stat2.jpg Graphic file (type jpg)
 File: images/stat3.jpg Graphic file (type jpg)
  <use images/stat3.jpg>
 [12 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
 [13 <C:/Users/jeanblai/workspace/trunk/Documents/Résumé/images/stat3.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 248--252
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--252
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--260
+Underfull \hbox (badness 10000) in paragraph at lines 249--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--260
+Underfull \hbox (badness 10000) in paragraph at lines 249--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--260
+Underfull \hbox (badness 10000) in paragraph at lines 254--261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
+Underfull \hbox (badness 10000) in paragraph at lines 254--261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
+Underfull \hbox (badness 10000) in paragraph at lines 254--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--265
 
  []
 
 [14] [15]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--277
+Underfull \hbox (badness 10000) in paragraph at lines 272--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--277
+Underfull \hbox (badness 10000) in paragraph at lines 272--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--277
+Underfull \hbox (badness 10000) in paragraph at lines 272--278
 
  []
 
@@ -383,7 +383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--277
 Here is how much of TeX's memory you used:
  2157 strings out of 495285
  28030 string characters out of 3180334
- 86082 words of memory out of 3000000
+ 85082 words of memory out of 3000000
  5324 multiletter control sequences out of 15000+200000
  42316 words of font info for 47 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -393,7 +393,7 @@ C:/Program Files/MiKTeX 2.8/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/M
 iKTeX 2.8/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on "Description sujet.pdf" (20 pages, 870383 bytes).
+Output written on "Description sujet.pdf" (20 pages, 870433 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

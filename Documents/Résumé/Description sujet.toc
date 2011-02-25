@@ -10,20 +10,20 @@
 \contentsline {section}{\numberline {1.3}Premi\`eres critiques des travaux existants}{4}
 \contentsline {chapter}{\numberline {2}R\'ealisation}{6}
 \contentsline {section}{\numberline {2.1}Objectifs et perspectives du projet de synth\`ese}{6}
-\contentsline {section}{\numberline {2.2}Crit\`eres de comparaison}{7}
-\contentsline {section}{\numberline {2.3}Probl\`emes rencontr\'es}{7}
-\contentsline {subsection}{\numberline {2.3.1}PKI}{7}
-\contentsline {subsection}{\numberline {2.3.2}Kerberos}{7}
-\contentsline {section}{\numberline {2.4}Impl\'ementation}{8}
-\contentsline {subsection}{\numberline {2.4.1}PKI}{8}
-\contentsline {subsection}{\numberline {2.4.2}Kerberos}{9}
-\contentsline {section}{\numberline {2.5}Comparaison des deux syst\`emes d'authentification}{10}
-\contentsline {subsection}{\numberline {2.5.1}Pour les PC}{10}
-\contentsline {subsection}{\numberline {2.5.2}Pour notre probl\`eme}{10}
-\contentsline {subsubsection}{Impl\'ementation}{13}
+\contentsline {section}{\numberline {2.2}Probl\`emes rencontr\'es}{7}
+\contentsline {subsection}{\numberline {2.2.1}PKI}{7}
+\contentsline {subsection}{\numberline {2.2.2}Kerberos}{7}
+\contentsline {section}{\numberline {2.3}Impl\'ementation}{8}
+\contentsline {subsection}{\numberline {2.3.1}PKI}{8}
+\contentsline {subsection}{\numberline {2.3.2}Kerberos}{9}
+\contentsline {section}{\numberline {2.4}Comparaison des deux syst\`emes d'authentification}{9}
+\contentsline {subsection}{\numberline {2.4.1}Pour les PC}{9}
+\contentsline {subsection}{\numberline {2.4.2}Pour notre probl\`eme}{10}
+\contentsline {section}{\numberline {2.5}Crit\`eres de comparaison}{13}
+\contentsline {subsubsection}{Impl\'ementation}{14}
 \contentsline {subsubsection}{Rapidit\'e d'ex\'ecution}{14}
 \contentsline {subsubsection}{Int\'eration avec l'homme}{14}
 \contentsline {subsubsection}{S\'ecurit\'e du protocole}{14}
-\contentsline {subsubsection}{Solidit\'e du protocole}{14}
-\contentsline {subsubsection}{Scalabilit\'e}{14}
+\contentsline {subsubsection}{Solidit\'e du protocole}{15}
+\contentsline {subsubsection}{Scalabilit\'e}{15}
 \contentsline {chapter}{\numberline {3}Conclusion}{16}

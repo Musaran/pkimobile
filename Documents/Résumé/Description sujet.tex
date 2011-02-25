@@ -16,6 +16,7 @@
 \noindent\keywordname\enspace\ignorespaces#1}
 \newcommand{\noun}[1]{\textsc{#1}}
 \newtheorem{algorithm}{Algorithm}
+\pagestyle{plain}
 
 \begin{document}
 \title{Comparaison fonctionnelle et expérimentale d'une PKI sur mobile et de Kerberos sur mobile. Mise en oeuvre et comparaison rigoureuse des résultats expérimentaux. Automatisation du déploiement.}
@@ -127,20 +128,6 @@ Coté Kerberos, nous avions réussi à créer un serveur Kerberos, basé uniquement s
 
 Malheureusement, nous n'avons pas pu réaliser cette partie du projet. Nous détaillerons tout cela, un peu plus tard.
 
-\section{Critères de comparaison}
-
-Notre sujet était d'exporter deux méthodes d'authentification pour machines traditionnelles sur des téléphones mobiles et de les comparer.
-
-Nous avons décidé de tester et comparer ses deux protocoles sur quelques aspects :
-\begin{enumerate}
-\item Implémentation
-\item Rapidité d'execution
-\item Interaction avec l'humain
-\item Sécurité du protocole
-\item Solidité du protocole
-\item Scalabilité
-\end{enumerate}
-
 \section{Problèmes rencontrés}
 
 \subsection{PKI}
@@ -235,7 +222,21 @@ Pour les PKI, les délais sont tellement négligeables, que tout est transparent p
 
 Comme mentionné plus haut, nous n'avons pas pu réaliser de client Kerberos. Ainsi la comparaison va être un peu plus difficile. Cependant sur certain critère, nous pouvons tout de même répondre.
 
-Récapitulons selon nos critères définis plus haut.
+\section{Critères de comparaison}
+
+Notre sujet était d'exporter deux méthodes d'authentification pour machines traditionnelles sur des téléphones mobiles et de les comparer.
+
+Nous avons décidé de tester et comparer ses deux protocoles sur quelques aspects :
+\begin{enumerate}
+\item Implémentation
+\item Rapidité d'execution
+\item Interaction avec l'humain
+\item Sécurité du protocole
+\item Solidité du protocole
+\item Scalabilité
+\end{enumerate}
+
+
 \subsubsection{Implémentation}
 L'implémentation a été bien plus aisée pour la PKI. On peut se demander pourquoi. La raison est simple, c'est un système d'authentification très utilisé. Ainsi, nous avons pu trouver énormément de tutoriaux, de guides, et surtout les bonnes méthodes dans l'API pour développer un client PKI. Pour Kerberos, de nombreux guides sont disponibles sur Internet, mais très peu sont assez détaillé. Et comme Kerberos n'est pas vraiment utilisé pour le grand public, les méthodes utiles à son développement ne sont pas incluses dans l'API de Google, et surtout, cette API n'accepte pas l'API de Kerberos.
 \newline
