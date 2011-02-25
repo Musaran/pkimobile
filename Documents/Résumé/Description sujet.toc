@@ -20,4 +20,10 @@
 \contentsline {section}{\numberline {2.5}Comparaison des deux syst\`emes d'authentification}{10}
 \contentsline {subsection}{\numberline {2.5.1}Pour les PC}{10}
 \contentsline {subsection}{\numberline {2.5.2}Pour notre probl\`eme}{10}
-\contentsline {chapter}{\numberline {3}Conclusion}{15}
+\contentsline {subsubsection}{Impl\'ementation}{13}
+\contentsline {subsubsection}{Rapidit\'e d'ex\'ecution}{14}
+\contentsline {subsubsection}{Int\'eration avec l'homme}{14}
+\contentsline {subsubsection}{S\'ecurit\'e du protocole}{14}
+\contentsline {subsubsection}{Solidit\'e du protocole}{14}
+\contentsline {subsubsection}{Scalabilit\'e}{14}
+\contentsline {chapter}{\numberline {3}Conclusion}{16}
